@@ -1,6 +1,6 @@
 import 'dart:io';
 
-import 'package:server/core/app_config.dart';
+import 'package:server/core/config/app_config.dart';
 import 'package:server/core/di.dart';
 
 class Security {

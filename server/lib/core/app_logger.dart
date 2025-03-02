@@ -1,7 +1,7 @@
 import 'dart:io';
 
 import 'package:logger/web.dart';
-import 'package:server/core/app_config.dart';
+import 'package:server/core/config/app_config.dart';
 import 'package:server/core/di.dart';
 
 enum LogType { info, warning, error }

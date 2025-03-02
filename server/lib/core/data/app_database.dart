@@ -1,13 +1,14 @@
 import 'dart:io';
 import 'package:csv/csv.dart';
 import 'package:server/core/app_logger.dart';
-import 'package:server/core/app_config.dart';
+import 'package:server/core/config/app_config.dart';
 import 'package:server/core/di.dart';
 import 'package:sqlite3/sqlite3.dart';
 
 class AppDatabase {
   static final AppDatabase _instance = AppDatabase._();
   static AppDatabase get instance => _instance;
+  static Database get database => _instance._database;
 
   static final _databaseName = getIt<AppConfig>().dbName;
   late final Database _database;
