@@ -8,6 +8,10 @@ environment:
 
 # Add regular dependencies here.
 dependencies:
+  sqlite3: ^2.7.4
+  dotenv: ^4.2.0
+  get_it: ^8.0.3
+  logger: ^2.5.0
   # path: ^1.8.0
 
 dev_dependencies:
