@@ -22,8 +22,7 @@ class Server {
     );
 
     try {
-      // Pour chaque client, on garde la socket dans l'isolate principal,
-      // et on spawn un isolate dédié au traitement des données
+      // Create async loop to handle multiple clients
       await for (SecureSocket client in server) {
         handleClient(client);
       }

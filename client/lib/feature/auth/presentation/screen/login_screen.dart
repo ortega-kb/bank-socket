@@ -50,10 +50,10 @@ class _LoginScreenState extends State<LoginScreen> {
       final socket = await SecureSocket.connect(
         '127.0.0.1',
         5001,
-        context: Security().context(),
+        context: await Security.instance.context(),
       );
 
-      socket.write('WRITE');
+      socket.listen((event) {});
     } catch (e) {
       if (!mounted) return;
       Message.error(context: context, message: e.toString());
