@@ -1,14 +1,14 @@
 import 'dart:io';
 
 import 'package:server/core/app_logger.dart';
-import 'package:server/core/config.dart';
+import 'package:server/core/app_config.dart';
 import 'package:server/core/di.dart';
 import 'package:server/core/security.dart';
 
 class Server {
   void run() async {
-    final serverHost = getIt<Config>().serverHost;
-    final serverPort = int.parse(getIt<Config>().serverPort);
+    final serverHost = getIt<AppConfig>().serverHost;
+    final serverPort = int.parse(getIt<AppConfig>().serverPort);
     final securityContext = getIt<Security>().context();
 
     final server = await SecureServerSocket.bind(

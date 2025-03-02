@@ -1,13 +1,13 @@
 import 'dart:io';
 
 import 'package:logger/web.dart';
-import 'package:server/core/config.dart';
+import 'package:server/core/app_config.dart';
 import 'package:server/core/di.dart';
 
 enum LogType { info, warning, error }
 
 class AppLogger {
-  final String _logFilePath = getIt<Config>().serverLogPath;
+  final String _logFilePath = getIt<AppConfig>().serverLogPath;
 
   final Logger _logger;
   AppLogger(this._logger);
