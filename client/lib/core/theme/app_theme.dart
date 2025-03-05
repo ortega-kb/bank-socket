@@ -1,15 +1,18 @@
 import 'package:client/core/theme/app_color.dart';
+import 'package:flex_color_scheme/flex_color_scheme.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class AppTheme {
   AppTheme._();
 
   // Constantes
-  static final _fontFamily = '';
+  static final _fontFamily = GoogleFonts.atkinsonHyperlegible().fontFamily;
   static const _useMaterial3 = true;
   static const _pageTransitionTheme = PageTransitionsTheme(
     builders: {
       TargetPlatform.android: FadeForwardsPageTransitionsBuilder(),
+      TargetPlatform.linux: CupertinoPageTransitionsBuilder(),
       TargetPlatform.iOS: CupertinoPageTransitionsBuilder(),
     },
   );
@@ -57,23 +60,46 @@ class AppTheme {
   );
 
   // Light mode
-  static ThemeData light = ThemeData(
+  static ThemeData light = FlexColorScheme.light(
     useMaterial3: _useMaterial3,
     fontFamily: _fontFamily,
-    scaffoldBackgroundColor: AppColor.lightGray,
-    cardTheme: CardTheme(
-      surfaceTintColor: AppColor.white,
-      color: AppColor.white,
-    ),
-    visualDensity: VisualDensity.adaptivePlatformDensity,
+    primary: AppColor.blueMarine,
+    scaffoldBackground: AppColor.lightGray,
+    surface: AppColor.white,
+    visualDensity: FlexColorScheme.comfortablePlatformDensity,
+    swapLegacyOnMaterial3: true,
     pageTransitionsTheme: _pageTransitionTheme,
+  ).toTheme.copyWith(
+    navigationBarTheme: navigationBarTheme(
+      AppColor.blueMarine,
+      AppColor.blueMarine,
+    ),
+    navigationRailTheme: navigationRailTheme(
+      AppColor.blueMarine,
+      AppColor.blueMarine,
+    ),
   );
 
   // Dark mode
-  static ThemeData dark = ThemeData(
+  static ThemeData dark = FlexColorScheme.dark(
     useMaterial3: _useMaterial3,
     fontFamily: _fontFamily,
-    visualDensity: VisualDensity.adaptivePlatformDensity,
+    primary: AppColor.blueMarine,
+    visualDensity: FlexColorScheme.comfortablePlatformDensity,
+    swapLegacyOnMaterial3: true,
     pageTransitionsTheme: _pageTransitionTheme,
+  ).toTheme.copyWith(
+    navigationBarTheme: navigationBarTheme(
+      AppColor.blueMarine,
+      FlexColorScheme.dark(
+        useMaterial3: _useMaterial3,
+      ).toTheme.colorScheme.surface,
+    ),
+    navigationRailTheme: navigationRailTheme(
+      AppColor.blueMarine,
+      FlexColorScheme.dark(
+        useMaterial3: _useMaterial3,
+      ).toTheme.colorScheme.surface,
+    ),
   );
 }

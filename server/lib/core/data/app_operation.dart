@@ -55,7 +55,7 @@ class AppOperation {
 
       if (clientResult.isNotEmpty) {
         final user = {
-          'accountNumber': accountNumber,
+          'account_number': accountNumber,
           'name': clientResult.first['Nom'],
           'surname': clientResult.first['Prenom'],
           'address': clientResult.first['Adresse'],
@@ -89,7 +89,7 @@ class AppOperation {
       _recordOperation(accountNumber, 'Withdrawal', amount);
       return _encodeResponse(AppResponse.withdrawOk, null);
     }
-    return _encodeResponse(AppResponse.withdrawNok, null);
+    return _encodeResponse(AppResponse.withdrawNok, "Montant insuffisant");
   }
 
   // Deposit money method with operation recording
@@ -146,7 +146,7 @@ class AppOperation {
       );
       return _encodeResponse(AppResponse.tranferOk, null);
     }
-    return _encodeResponse(AppResponse.tranferNok, null);
+    return _encodeResponse(AppResponse.tranferNok, 'Montant insuffisant');
   }
 
   // Get balance of an account
@@ -182,7 +182,7 @@ class AppOperation {
       [accountNumber],
     );
 
-    if (result.isEmpty) return _encodeResponse(AppResponse.errOperation, null);
+    if (result.isEmpty) return _encodeResponse(AppResponse.history, []);
 
     final history =
         result.map((row) {

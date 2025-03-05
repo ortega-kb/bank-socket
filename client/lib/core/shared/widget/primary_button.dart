@@ -5,11 +5,7 @@ class PrimaryButton extends StatelessWidget {
   final String text;
   final Function()? onPressed;
 
-  const PrimaryButton({
-    super.key,
-    required this.text,
-    this.onPressed,
-  });
+  const PrimaryButton({super.key, required this.text, this.onPressed});
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +20,7 @@ class PrimaryButton extends StatelessWidget {
       child: Text(
         text,
         style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-          color: Theme.of(context).colorScheme.onPrimary
+          color: Theme.of(context).colorScheme.onPrimary,
         ),
       ),
     );

@@ -1,4 +1,3 @@
-
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 
 class Config {
@@ -11,5 +10,5 @@ class Config {
   String get serverHost => _dotEnv.env['SERVER_HOST'] ?? '';
   String get serverPort => _dotEnv.env['SERVER_PORT'] ?? '';
 
-  String get serverLogPath => _dotEnv.env['CLIENT_LOG_PATH'] ?? '';
+  String get clientLogPath => _dotEnv.env['CLIENT_LOG_PATH'] ?? '';
 }

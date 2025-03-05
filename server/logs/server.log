@@ -108,3 +108,406 @@
 [2025-03-02 13:42:54.063138] - [INFO] - Secure bank server started on 127.0.0.1:5001...
 [2025-03-02 13:42:57.387193] - [INFO] - New connection from 127.0.0.1:5001
 [2025-03-02 13:45:13.194986] - [INFO] - Connection closed for 127.0.0.1:5001
+[2025-03-02 13:49:23.300957] - [INFO] - New connection from 127.0.0.1:5001
+[2025-03-02 14:10:49.411757] - [INFO] - Connection closed for 127.0.0.1:5001
+[2025-03-02 14:12:13.606771] - [INFO] - Creating the database instance.
+[2025-03-02 14:12:13.626946] - [INFO] - Creating tables in the database.
+[2025-03-02 14:12:13.637312] - [INFO] - Skipping import for "clients", data already exists.
+[2025-03-02 14:12:13.638125] - [INFO] - Skipping import for "comptes", data already exists.
+[2025-03-02 14:12:13.638962] - [INFO] - Skipping import for "operations", data already exists.
+[2025-03-02 14:12:13.651216] - [INFO] - Secure bank server started on 127.0.0.1:5001...
+[2025-03-02 14:12:24.696724] - [INFO] - New connection from 127.0.0.1:5001
+[2025-03-02 14:12:26.855387] - [INFO] - New connection from 127.0.0.1:5001
+[2025-03-02 14:15:03.344358] - [INFO] - Connection closed for 127.0.0.1:5001
+[2025-03-02 14:15:04.176251] - [INFO] - Connection closed for 127.0.0.1:5001
+[2025-03-02 14:17:18.408456] - [INFO] - New connection from 127.0.0.1:5001
+[2025-03-02 14:17:40.790013] - [INFO] - Connection closed for 127.0.0.1:5001
+[2025-03-02 14:28:29.924909] - [INFO] - Creating the database instance.
+[2025-03-02 14:28:29.944530] - [INFO] - Creating tables in the database.
+[2025-03-02 14:28:29.956075] - [INFO] - Skipping import for "clients", data already exists.
+[2025-03-02 14:28:29.957191] - [INFO] - Skipping import for "comptes", data already exists.
+[2025-03-02 14:28:29.958658] - [INFO] - Skipping import for "operations", data already exists.
+[2025-03-02 14:28:29.973354] - [INFO] - Secure bank server started on 127.0.0.1:5001...
+[2025-03-02 14:40:42.677368] - [INFO] - Creating the database instance.
+[2025-03-02 14:40:42.706919] - [INFO] - Creating tables in the database.
+[2025-03-02 14:40:42.722901] - [INFO] - Skipping import for "clients", data already exists.
+[2025-03-02 14:40:42.723724] - [INFO] - Skipping import for "comptes", data already exists.
+[2025-03-02 14:40:42.724875] - [INFO] - Skipping import for "operations", data already exists.
+[2025-03-02 14:40:42.738672] - [INFO] - Secure bank server started on 127.0.0.1:5001...
+[2025-03-02 14:40:53.482656] - [INFO] - New connection from 127.0.0.1:5001
+[2025-03-02 14:41:21.149730] - [INFO] - Connection closed for 127.0.0.1:5001
+[2025-03-02 14:41:21.714268] - [INFO] - New connection from 127.0.0.1:5001
+[2025-03-02 14:41:44.818846] - [INFO] - Connection closed for 127.0.0.1:5001
+[2025-03-02 14:41:45.218350] - [INFO] - New connection from 127.0.0.1:5001
+[2025-03-02 14:44:13.744414] - [INFO] - Connection closed for 127.0.0.1:5001
+[2025-03-02 14:44:14.176329] - [INFO] - New connection from 127.0.0.1:5001
+[2025-03-02 14:45:14.898007] - [INFO] - Connection closed for 127.0.0.1:5001
+[2025-03-02 14:45:15.312247] - [INFO] - New connection from 127.0.0.1:5001
+[2025-03-02 14:45:16.003050] - [INFO] - New connection from 127.0.0.1:5001
+[2025-03-02 15:09:43.858716] - [INFO] - Connection closed for 127.0.0.1:5001
+[2025-03-02 15:09:43.860430] - [INFO] - Connection closed for 127.0.0.1:5001
+[2025-03-02 15:09:44.233151] - [INFO] - New connection from 127.0.0.1:5001
+[2025-03-02 15:09:44.875697] - [INFO] - New connection from 127.0.0.1:5001
+[2025-03-02 15:12:20.704071] - [INFO] - Connection closed for 127.0.0.1:5001
+[2025-03-02 15:12:20.706178] - [INFO] - Connection closed for 127.0.0.1:5001
+[2025-03-02 15:12:21.075117] - [INFO] - New connection from 127.0.0.1:5001
+[2025-03-02 15:13:01.926062] - [INFO] - Connection closed for 127.0.0.1:5001
+[2025-03-02 15:13:02.425035] - [INFO] - New connection from 127.0.0.1:5001
+[2025-03-02 15:14:35.626505] - [INFO] - Connection closed for 127.0.0.1:5001
+[2025-03-02 15:14:36.016347] - [INFO] - New connection from 127.0.0.1:5001
+[2025-03-02 15:14:43.511859] - [INFO] - Connection closed for 127.0.0.1:5001
+[2025-03-02 15:14:43.869008] - [INFO] - New connection from 127.0.0.1:5001
+[2025-03-02 15:15:23.726329] - [INFO] - Connection closed for 127.0.0.1:5001
+[2025-03-02 15:15:24.085176] - [INFO] - New connection from 127.0.0.1:5001
+[2025-03-02 15:15:47.949223] - [INFO] - Connection closed for 127.0.0.1:5001
+[2025-03-02 15:15:48.328877] - [INFO] - New connection from 127.0.0.1:5001
+[2025-03-02 16:48:13.076960] - [INFO] - Connection closed for 127.0.0.1:5001
+[2025-03-02 16:48:13.543758] - [INFO] - New connection from 127.0.0.1:5001
+[2025-03-02 16:48:23.433637] - [INFO] - Creating the database instance.
+[2025-03-02 16:48:23.452735] - [INFO] - Creating tables in the database.
+[2025-03-02 16:48:23.465783] - [INFO] - Skipping import for "clients", data already exists.
+[2025-03-02 16:48:23.467002] - [INFO] - Skipping import for "comptes", data already exists.
+[2025-03-02 16:48:23.467995] - [INFO] - Skipping import for "operations", data already exists.
+[2025-03-02 16:48:23.482635] - [INFO] - Secure bank server started on 127.0.0.1:5001...
+[2025-03-02 16:48:28.984621] - [INFO] - New connection from 127.0.0.1:5001
+[2025-03-02 16:53:23.248597] - [INFO] - Connection closed for 127.0.0.1:5001
+[2025-03-02 16:53:23.639309] - [INFO] - New connection from 127.0.0.1:5001
+[2025-03-02 16:56:05.142804] - [INFO] - Connection closed for 127.0.0.1:5001
+[2025-03-02 17:02:59.739830] - [INFO] - Creating the database instance.
+[2025-03-02 17:02:59.758179] - [INFO] - Creating tables in the database.
+[2025-03-02 17:02:59.769476] - [INFO] - Skipping import for "clients", data already exists.
+[2025-03-02 17:02:59.770790] - [INFO] - Skipping import for "comptes", data already exists.
+[2025-03-02 17:02:59.771994] - [INFO] - Skipping import for "operations", data already exists.
+[2025-03-02 17:02:59.785012] - [INFO] - Secure bank server started on 127.0.0.1:5001...
+[2025-03-02 17:03:14.035948] - [INFO] - New connection from 127.0.0.1:5001
+[2025-03-02 17:17:44.916832] - [INFO] - Creating the database instance.
+[2025-03-02 17:17:44.935456] - [INFO] - Creating tables in the database.
+[2025-03-02 17:17:44.948450] - [INFO] - Skipping import for "clients", data already exists.
+[2025-03-02 17:17:44.949156] - [INFO] - Skipping import for "comptes", data already exists.
+[2025-03-02 17:17:44.950034] - [INFO] - Skipping import for "operations", data already exists.
+[2025-03-02 17:17:44.963068] - [INFO] - Secure bank server started on 127.0.0.1:5001...
+[2025-03-02 17:18:23.084434] - [INFO] - New connection from 127.0.0.1:5001
+[2025-03-02 17:18:32.114552] - [INFO] - Connection closed for 127.0.0.1:5001
+[2025-03-02 17:18:45.648199] - [INFO] - New connection from 127.0.0.1:5001
+[2025-03-04 11:14:23.721333] - [INFO] - Creating the database instance.
+[2025-03-04 11:14:23.752766] - [INFO] - Creating tables in the database.
+[2025-03-04 11:14:23.807138] - [INFO] - Skipping import for "clients", data already exists.
+[2025-03-04 11:14:23.807792] - [INFO] - Skipping import for "comptes", data already exists.
+[2025-03-04 11:14:23.810185] - [INFO] - Skipping import for "operations", data already exists.
+[2025-03-04 11:14:23.833090] - [INFO] - Secure bank server started on 127.0.0.1:5001...
+[2025-03-04 11:14:58.909351] - [INFO] - New connection from 127.0.0.1:5001
+[2025-03-04 11:19:18.475807] - [INFO] - Connection closed for 127.0.0.1:5001
+[2025-03-04 11:19:48.253197] - [INFO] - New connection from 127.0.0.1:5001
+[2025-03-04 18:49:04.519518] - [INFO] - Creating the database instance.
+[2025-03-04 18:49:04.540211] - [INFO] - Creating tables in the database.
+[2025-03-04 18:49:04.557235] - [INFO] - Skipping import for "clients", data already exists.
+[2025-03-04 18:49:04.558022] - [INFO] - Skipping import for "comptes", data already exists.
+[2025-03-04 18:49:04.558953] - [INFO] - Skipping import for "operations", data already exists.
+[2025-03-04 18:49:04.576091] - [INFO] - Secure bank server started on 127.0.0.1:5001...
+[2025-03-04 18:49:26.176444] - [INFO] - New connection from 127.0.0.1:5001
+[2025-03-04 18:56:31.326028] - [INFO] - Creating the database instance.
+[2025-03-04 18:56:31.344067] - [INFO] - Creating tables in the database.
+[2025-03-04 18:56:31.354426] - [INFO] - Skipping import for "clients", data already exists.
+[2025-03-04 18:56:31.355320] - [INFO] - Skipping import for "comptes", data already exists.
+[2025-03-04 18:56:31.356424] - [INFO] - Skipping import for "operations", data already exists.
+[2025-03-04 18:56:31.369689] - [INFO] - Secure bank server started on 127.0.0.1:5001...
+[2025-03-04 18:56:57.635515] - [INFO] - New connection from 127.0.0.1:5001
+[2025-03-04 18:58:10.241451] - [INFO] - Connection closed for 127.0.0.1:5001
+[2025-03-04 18:58:10.696689] - [INFO] - New connection from 127.0.0.1:5001
+[2025-03-04 18:58:29.167872] - [INFO] - Connection closed for 127.0.0.1:5001
+[2025-03-04 18:58:29.644280] - [INFO] - New connection from 127.0.0.1:5001
+[2025-03-04 18:58:40.231121] - [INFO] - Connection closed for 127.0.0.1:5001
+[2025-03-04 18:58:40.651976] - [INFO] - New connection from 127.0.0.1:5001
+[2025-03-04 18:59:49.176975] - [INFO] - Connection closed for 127.0.0.1:5001
+[2025-03-04 18:59:49.544614] - [INFO] - New connection from 127.0.0.1:5001
+[2025-03-04 19:20:03.839880] - [INFO] - Connection closed for 127.0.0.1:5001
+[2025-03-04 19:20:04.229109] - [INFO] - New connection from 127.0.0.1:5001
+[2025-03-04 19:20:33.808587] - [INFO] - Connection closed for 127.0.0.1:5001
+[2025-03-04 19:20:34.256700] - [INFO] - New connection from 127.0.0.1:5001
+[2025-03-04 19:20:46.578658] - [INFO] - Connection closed for 127.0.0.1:5001
+[2025-03-04 19:20:46.997231] - [INFO] - New connection from 127.0.0.1:5001
+[2025-03-04 19:24:02.050133] - [INFO] - Creating the database instance.
+[2025-03-04 19:24:02.072176] - [INFO] - Creating tables in the database.
+[2025-03-04 19:24:02.086473] - [INFO] - Skipping import for "clients", data already exists.
+[2025-03-04 19:24:02.087464] - [INFO] - Skipping import for "comptes", data already exists.
+[2025-03-04 19:24:02.089063] - [INFO] - Skipping import for "operations", data already exists.
+[2025-03-04 19:24:02.110059] - [INFO] - Secure bank server started on 127.0.0.1:5001...
+[2025-03-04 19:24:25.095441] - [INFO] - New connection from 127.0.0.1:5001
+[2025-03-04 19:25:08.957952] - [INFO] - Creating the database instance.
+[2025-03-04 19:25:08.977931] - [INFO] - Creating tables in the database.
+[2025-03-04 19:25:08.996250] - [INFO] - Skipping import for "clients", data already exists.
+[2025-03-04 19:25:08.997113] - [INFO] - Skipping import for "comptes", data already exists.
+[2025-03-04 19:25:08.998140] - [INFO] - Skipping import for "operations", data already exists.
+[2025-03-04 19:25:09.012285] - [INFO] - Secure bank server started on 127.0.0.1:5001...
+[2025-03-04 19:25:24.184821] - [INFO] - New connection from 127.0.0.1:5001
+[2025-03-04 19:26:35.326400] - [INFO] - Connection closed for 127.0.0.1:5001
+[2025-03-04 19:26:35.807171] - [INFO] - New connection from 127.0.0.1:5001
+[2025-03-04 19:26:49.901535] - [INFO] - Connection closed for 127.0.0.1:5001
+[2025-03-04 19:26:50.277512] - [INFO] - New connection from 127.0.0.1:5001
+[2025-03-04 19:29:10.233699] - [INFO] - Connection closed for 127.0.0.1:5001
+[2025-03-04 19:29:10.608519] - [INFO] - New connection from 127.0.0.1:5001
+[2025-03-04 19:29:57.740673] - [INFO] - Connection closed for 127.0.0.1:5001
+[2025-03-04 19:29:58.138222] - [INFO] - New connection from 127.0.0.1:5001
+[2025-03-04 19:33:17.184685] - [INFO] - Creating the database instance.
+[2025-03-04 19:33:17.201739] - [INFO] - Creating tables in the database.
+[2025-03-04 19:33:17.212655] - [INFO] - Skipping import for "clients", data already exists.
+[2025-03-04 19:33:17.213481] - [INFO] - Skipping import for "comptes", data already exists.
+[2025-03-04 19:33:17.214468] - [INFO] - Skipping import for "operations", data already exists.
+[2025-03-04 19:33:17.228368] - [INFO] - Secure bank server started on 127.0.0.1:5001...
+[2025-03-04 19:33:28.006983] - [INFO] - New connection from 127.0.0.1:5001
+[2025-03-04 19:36:13.526328] - [INFO] - Creating the database instance.
+[2025-03-04 19:36:13.546766] - [INFO] - Creating tables in the database.
+[2025-03-04 19:36:13.562863] - [INFO] - Skipping import for "clients", data already exists.
+[2025-03-04 19:36:13.563740] - [INFO] - Skipping import for "comptes", data already exists.
+[2025-03-04 19:36:13.565117] - [INFO] - Skipping import for "operations", data already exists.
+[2025-03-04 19:36:13.580333] - [INFO] - Secure bank server started on 127.0.0.1:5001...
+[2025-03-04 19:38:51.819093] - [INFO] - Creating the database instance.
+[2025-03-04 19:38:51.835663] - [INFO] - Creating tables in the database.
+[2025-03-04 19:38:51.845268] - [INFO] - Skipping import for "clients", data already exists.
+[2025-03-04 19:38:51.846334] - [INFO] - Skipping import for "comptes", data already exists.
+[2025-03-04 19:38:51.847637] - [INFO] - Skipping import for "operations", data already exists.
+[2025-03-04 19:38:51.859241] - [INFO] - Secure bank server started on 127.0.0.1:5001...
+[2025-03-04 19:39:05.786565] - [INFO] - New connection from 127.0.0.1:5001
+[2025-03-04 19:47:02.012743] - [INFO] - Creating the database instance.
+[2025-03-04 19:47:02.032302] - [INFO] - Creating tables in the database.
+[2025-03-04 19:47:02.044624] - [INFO] - Skipping import for "clients", data already exists.
+[2025-03-04 19:47:02.045845] - [INFO] - Skipping import for "comptes", data already exists.
+[2025-03-04 19:47:02.046824] - [INFO] - Skipping import for "operations", data already exists.
+[2025-03-04 19:47:02.059665] - [INFO] - Secure bank server started on 127.0.0.1:5001...
+[2025-03-04 19:47:13.466839] - [INFO] - New connection from 127.0.0.1:5001
+[2025-03-04 19:56:28.071388] - [INFO] - New connection from 127.0.0.1:5001
+[2025-03-04 19:58:28.861975] - [INFO] - Creating the database instance.
+[2025-03-04 19:58:28.880443] - [INFO] - Creating tables in the database.
+[2025-03-04 19:58:28.897795] - [INFO] - Skipping import for "clients", data already exists.
+[2025-03-04 19:58:28.898811] - [INFO] - Skipping import for "comptes", data already exists.
+[2025-03-04 19:58:28.900044] - [INFO] - Skipping import for "operations", data already exists.
+[2025-03-04 19:58:28.916741] - [INFO] - Secure bank server started on 127.0.0.1:5001...
+[2025-03-04 19:58:55.378468] - [INFO] - New connection from 127.0.0.1:5001
+[2025-03-04 19:59:11.110166] - [INFO] - Connection closed for 127.0.0.1:5001
+[2025-03-04 19:59:27.602414] - [INFO] - Creating the database instance.
+[2025-03-04 19:59:27.620001] - [INFO] - Creating tables in the database.
+[2025-03-04 19:59:27.631277] - [INFO] - Skipping import for "clients", data already exists.
+[2025-03-04 19:59:27.632129] - [INFO] - Skipping import for "comptes", data already exists.
+[2025-03-04 19:59:27.633073] - [INFO] - Skipping import for "operations", data already exists.
+[2025-03-04 19:59:27.645620] - [INFO] - Secure bank server started on 127.0.0.1:5001...
+[2025-03-04 19:59:39.548515] - [INFO] - New connection from 127.0.0.1:5001
+[2025-03-04 20:01:00.109187] - [INFO] - Connection closed for 127.0.0.1:5001
+[2025-03-04 20:01:00.588224] - [INFO] - New connection from 127.0.0.1:5001
+[2025-03-04 20:02:02.269780] - [INFO] - Connection closed for 127.0.0.1:5001
+[2025-03-04 20:02:02.747576] - [INFO] - New connection from 127.0.0.1:5001
+[2025-03-04 20:02:43.642933] - [INFO] - Connection closed for 127.0.0.1:5001
+[2025-03-04 20:02:44.070468] - [INFO] - New connection from 127.0.0.1:5001
+[2025-03-04 20:03:02.767879] - [INFO] - Connection closed for 127.0.0.1:5001
+[2025-03-04 20:03:03.238060] - [INFO] - New connection from 127.0.0.1:5001
+[2025-03-04 20:03:16.610969] - [INFO] - Connection closed for 127.0.0.1:5001
+[2025-03-04 20:09:38.690552] - [INFO] - New connection from 127.0.0.1:5001
+[2025-03-04 20:14:07.229274] - [INFO] - New connection from 127.0.0.1:5001
+[2025-03-04 20:15:32.425180] - [INFO] - Connection closed for 127.0.0.1:5001
+[2025-03-04 20:15:32.902940] - [INFO] - New connection from 127.0.0.1:5001
+[2025-03-04 20:15:46.020554] - [INFO] - Connection closed for 127.0.0.1:5001
+[2025-03-04 20:15:46.441523] - [INFO] - New connection from 127.0.0.1:5001
+[2025-03-04 20:16:08.404729] - [INFO] - Connection closed for 127.0.0.1:5001
+[2025-03-04 20:17:05.835497] - [INFO] - Creating the database instance.
+[2025-03-04 20:17:05.851375] - [INFO] - Creating tables in the database.
+[2025-03-04 20:17:05.859037] - [INFO] - Skipping import for "clients", data already exists.
+[2025-03-04 20:17:05.859348] - [INFO] - Skipping import for "comptes", data already exists.
+[2025-03-04 20:17:05.859661] - [INFO] - Skipping import for "operations", data already exists.
+[2025-03-04 20:17:05.867936] - [INFO] - Secure bank server started on 127.0.0.1:5001...
+[2025-03-04 20:17:38.419729] - [INFO] - Creating the database instance.
+[2025-03-04 20:17:38.435934] - [INFO] - Creating tables in the database.
+[2025-03-04 20:17:38.443404] - [INFO] - Skipping import for "clients", data already exists.
+[2025-03-04 20:17:38.443720] - [INFO] - Skipping import for "comptes", data already exists.
+[2025-03-04 20:17:38.444046] - [INFO] - Skipping import for "operations", data already exists.
+[2025-03-04 20:17:38.452368] - [INFO] - Secure bank server started on 127.0.0.1:5001...
+[2025-03-04 20:17:58.367272] - [INFO] - Creating the database instance.
+[2025-03-04 20:17:58.385411] - [INFO] - Creating tables in the database.
+[2025-03-04 20:17:58.396716] - [INFO] - Skipping import for "clients", data already exists.
+[2025-03-04 20:17:58.397585] - [INFO] - Skipping import for "comptes", data already exists.
+[2025-03-04 20:17:58.398777] - [INFO] - Skipping import for "operations", data already exists.
+[2025-03-04 20:17:58.410372] - [INFO] - Secure bank server started on 127.0.0.1:5001...
+[2025-03-04 20:18:14.924493] - [INFO] - Creating the database instance.
+[2025-03-04 20:18:14.943389] - [INFO] - Creating tables in the database.
+[2025-03-04 20:18:14.958580] - [INFO] - Skipping import for "clients", data already exists.
+[2025-03-04 20:18:14.959589] - [INFO] - Skipping import for "comptes", data already exists.
+[2025-03-04 20:18:14.960741] - [INFO] - Skipping import for "operations", data already exists.
+[2025-03-04 20:18:14.980111] - [INFO] - Secure bank server started on 127.0.0.1:5001...
+[2025-03-04 20:19:51.940395] - [INFO] - New connection from 127.0.0.1:5001
+[2025-03-04 20:20:15.676085] - [INFO] - New connection from 127.0.0.1:5001
+[2025-03-04 20:21:16.397825] - [INFO] - Connection closed for 127.0.0.1:5001
+[2025-03-04 20:21:35.318577] - [INFO] - Connection closed for 127.0.0.1:5001
+[2025-03-04 20:21:35.565948] - [INFO] - New connection from 127.0.0.1:5001
+[2025-03-04 20:21:52.156005] - [INFO] - New connection from 127.0.0.1:5001
+[2025-03-04 20:22:39.973144] - [INFO] - Connection closed for 127.0.0.1:5001
+[2025-03-04 20:22:41.842040] - [INFO] - Connection closed for 127.0.0.1:5001
+[2025-03-04 20:24:06.313766] - [INFO] - New connection from 127.0.0.1:5001
+[2025-03-04 20:30:36.687565] - [INFO] - Connection closed for 127.0.0.1:5001
+[2025-03-04 20:30:37.137219] - [INFO] - New connection from 127.0.0.1:5001
+[2025-03-04 21:19:29.822964] - [INFO] - Connection closed for 127.0.0.1:5001
+[2025-03-04 21:19:30.325329] - [INFO] - New connection from 127.0.0.1:5001
+[2025-03-04 21:28:47.046180] - [INFO] - Connection closed for 127.0.0.1:5001
+[2025-03-04 21:28:47.501496] - [INFO] - New connection from 127.0.0.1:5001
+[2025-03-04 21:30:16.175290] - [INFO] - Connection closed for 127.0.0.1:5001
+[2025-03-04 21:30:16.614060] - [INFO] - New connection from 127.0.0.1:5001
+[2025-03-04 22:04:59.514237] - [INFO] - Connection closed for 127.0.0.1:5001
+[2025-03-04 22:04:59.921617] - [INFO] - New connection from 127.0.0.1:5001
+[2025-03-04 22:13:58.444491] - [INFO] - Connection closed for 127.0.0.1:5001
+[2025-03-04 22:13:58.911830] - [INFO] - New connection from 127.0.0.1:5001
+[2025-03-04 22:15:20.518565] - [INFO] - Connection closed for 127.0.0.1:5001
+[2025-03-04 22:15:20.978838] - [INFO] - New connection from 127.0.0.1:5001
+[2025-03-04 22:17:45.056404] - [INFO] - Connection closed for 127.0.0.1:5001
+[2025-03-04 22:17:45.479512] - [INFO] - New connection from 127.0.0.1:5001
+[2025-03-04 22:18:02.811703] - [INFO] - Connection closed for 127.0.0.1:5001
+[2025-03-04 22:18:03.267920] - [INFO] - New connection from 127.0.0.1:5001
+[2025-03-04 22:18:15.646392] - [INFO] - Connection closed for 127.0.0.1:5001
+[2025-03-04 22:18:16.026898] - [INFO] - New connection from 127.0.0.1:5001
+[2025-03-04 22:39:21.058888] - [INFO] - Connection closed for 127.0.0.1:5001
+[2025-03-04 22:39:21.455625] - [INFO] - New connection from 127.0.0.1:5001
+[2025-03-04 22:51:45.377965] - [INFO] - Connection closed for 127.0.0.1:5001
+[2025-03-04 22:51:45.841159] - [INFO] - New connection from 127.0.0.1:5001
+[2025-03-04 22:52:26.245660] - [INFO] - Connection closed for 127.0.0.1:5001
+[2025-03-04 22:52:26.686291] - [INFO] - New connection from 127.0.0.1:5001
+[2025-03-04 22:52:51.099514] - [INFO] - Connection closed for 127.0.0.1:5001
+[2025-03-04 22:52:51.526357] - [INFO] - New connection from 127.0.0.1:5001
+[2025-03-04 22:53:05.525671] - [INFO] - Connection closed for 127.0.0.1:5001
+[2025-03-04 22:53:05.935579] - [INFO] - New connection from 127.0.0.1:5001
+[2025-03-04 23:06:25.981136] - [INFO] - Connection closed for 127.0.0.1:5001
+[2025-03-04 23:06:26.390349] - [INFO] - New connection from 127.0.0.1:5001
+[2025-03-04 23:41:11.046075] - [INFO] - New connection from 127.0.0.1:5001
+[2025-03-04 23:56:06.272185] - [INFO] - Connection closed for 127.0.0.1:5001
+[2025-03-04 23:56:06.688020] - [INFO] - New connection from 127.0.0.1:5001
+[2025-03-05 00:12:17.692219] - [INFO] - Connection closed for 127.0.0.1:5001
+[2025-03-05 00:12:18.107068] - [INFO] - New connection from 127.0.0.1:5001
+[2025-03-05 00:22:03.644548] - [INFO] - Connection closed for 127.0.0.1:5001
+[2025-03-05 00:22:04.039090] - [INFO] - New connection from 127.0.0.1:5001
+[2025-03-05 12:55:02.929642] - [INFO] - Connection closed for 127.0.0.1:5001
+[2025-03-05 12:55:03.400532] - [INFO] - New connection from 127.0.0.1:5001
+[2025-03-05 13:14:32.407690] - [INFO] - Connection closed for 127.0.0.1:5001
+[2025-03-05 13:14:32.847848] - [INFO] - New connection from 127.0.0.1:5001
+[2025-03-05 13:15:18.436735] - [INFO] - Connection closed for 127.0.0.1:5001
+[2025-03-05 13:15:18.873036] - [INFO] - New connection from 127.0.0.1:5001
+[2025-03-05 13:29:37.529274] - [INFO] - Connection closed for 127.0.0.1:5001
+[2025-03-05 13:29:37.963337] - [INFO] - New connection from 127.0.0.1:5001
+[2025-03-05 13:55:57.422944] - [INFO] - Connection closed for 127.0.0.1:5001
+[2025-03-05 13:55:57.858815] - [INFO] - New connection from 127.0.0.1:5001
+[2025-03-05 14:00:06.048711] - [INFO] - Connection closed for 127.0.0.1:5001
+[2025-03-05 14:00:06.495722] - [INFO] - New connection from 127.0.0.1:5001
+[2025-03-05 14:01:38.926523] - [INFO] - Connection closed for 127.0.0.1:5001
+[2025-03-05 14:01:39.413813] - [INFO] - New connection from 127.0.0.1:5001
+[2025-03-05 14:03:09.121237] - [INFO] - Connection closed for 127.0.0.1:5001
+[2025-03-05 14:03:09.638196] - [INFO] - New connection from 127.0.0.1:5001
+[2025-03-05 14:04:00.409417] - [INFO] - Connection closed for 127.0.0.1:5001
+[2025-03-05 14:04:00.862935] - [INFO] - New connection from 127.0.0.1:5001
+[2025-03-05 14:05:28.738123] - [INFO] - Connection closed for 127.0.0.1:5001
+[2025-03-05 14:05:29.137885] - [INFO] - New connection from 127.0.0.1:5001
+[2025-03-05 14:06:35.532325] - [INFO] - Connection closed for 127.0.0.1:5001
+[2025-03-05 14:06:35.942407] - [INFO] - New connection from 127.0.0.1:5001
+[2025-03-05 14:08:31.024382] - [INFO] - Connection closed for 127.0.0.1:5001
+[2025-03-05 14:08:31.487195] - [INFO] - New connection from 127.0.0.1:5001
+[2025-03-05 14:08:51.177842] - [INFO] - Connection closed for 127.0.0.1:5001
+[2025-03-05 14:08:51.650331] - [INFO] - New connection from 127.0.0.1:5001
+[2025-03-05 14:11:15.315717] - [INFO] - Connection closed for 127.0.0.1:5001
+[2025-03-05 14:11:15.747740] - [INFO] - New connection from 127.0.0.1:5001
+[2025-03-05 14:11:26.299755] - [INFO] - Connection closed for 127.0.0.1:5001
+[2025-03-05 14:11:26.746478] - [INFO] - New connection from 127.0.0.1:5001
+[2025-03-05 14:18:21.223943] - [INFO] - Connection closed for 127.0.0.1:5001
+[2025-03-05 14:18:21.708340] - [INFO] - New connection from 127.0.0.1:5001
+[2025-03-05 14:20:13.214429] - [INFO] - Connection closed for 127.0.0.1:5001
+[2025-03-05 14:20:13.682204] - [INFO] - New connection from 127.0.0.1:5001
+[2025-03-05 14:21:40.275411] - [INFO] - Connection closed for 127.0.0.1:5001
+[2025-03-05 14:21:40.706544] - [INFO] - New connection from 127.0.0.1:5001
+[2025-03-05 14:23:37.825758] - [INFO] - Connection closed for 127.0.0.1:5001
+[2025-03-05 14:23:38.295568] - [INFO] - New connection from 127.0.0.1:5001
+[2025-03-05 14:24:33.261618] - [INFO] - Connection closed for 127.0.0.1:5001
+[2025-03-05 14:24:33.731239] - [INFO] - New connection from 127.0.0.1:5001
+[2025-03-05 14:25:06.584034] - [INFO] - Connection closed for 127.0.0.1:5001
+[2025-03-05 14:25:06.967740] - [INFO] - New connection from 127.0.0.1:5001
+[2025-03-05 14:58:56.529949] - [INFO] - Connection closed for 127.0.0.1:5001
+[2025-03-05 14:58:56.945399] - [INFO] - New connection from 127.0.0.1:5001
+[2025-03-05 14:59:42.623107] - [INFO] - Connection closed for 127.0.0.1:5001
+[2025-03-05 14:59:43.049934] - [INFO] - New connection from 127.0.0.1:5001
+[2025-03-05 15:00:19.385994] - [INFO] - Connection closed for 127.0.0.1:5001
+[2025-03-05 15:00:19.840575] - [INFO] - New connection from 127.0.0.1:5001
+[2025-03-05 15:06:36.854073] - [INFO] - Connection closed for 127.0.0.1:5001
+[2025-03-05 15:06:37.329907] - [INFO] - New connection from 127.0.0.1:5001
+[2025-03-05 15:06:46.111377] - [INFO] - Connection closed for 127.0.0.1:5001
+[2025-03-05 15:06:46.510618] - [INFO] - New connection from 127.0.0.1:5001
+[2025-03-05 15:09:07.805993] - [INFO] - Connection closed for 127.0.0.1:5001
+[2025-03-05 15:09:08.200059] - [INFO] - New connection from 127.0.0.1:5001
+[2025-03-05 15:13:19.749293] - [INFO] - Creating the database instance.
+[2025-03-05 15:13:19.804076] - [INFO] - Creating tables in the database.
+[2025-03-05 15:13:19.815271] - [INFO] - Skipping import for "clients", data already exists.
+[2025-03-05 15:13:19.816248] - [INFO] - Skipping import for "comptes", data already exists.
+[2025-03-05 15:13:19.817350] - [INFO] - Skipping import for "operations", data already exists.
+[2025-03-05 15:13:19.829380] - [INFO] - Secure bank server started on 127.0.0.1:5001...
+[2025-03-05 15:13:29.639340] - [INFO] - New connection from 127.0.0.1:5001
+[2025-03-05 15:15:19.574016] - [INFO] - Connection closed for 127.0.0.1:5001
+[2025-03-05 15:15:20.056708] - [INFO] - New connection from 127.0.0.1:5001
+[2025-03-05 15:16:05.284869] - [INFO] - Connection closed for 127.0.0.1:5001
+[2025-03-05 15:16:05.710678] - [INFO] - New connection from 127.0.0.1:5001
+[2025-03-05 15:17:27.855103] - [INFO] - Creating the database instance.
+[2025-03-05 15:17:27.878535] - [INFO] - Creating tables in the database.
+[2025-03-05 15:17:27.890672] - [INFO] - Skipping import for "clients", data already exists.
+[2025-03-05 15:17:27.891738] - [INFO] - Skipping import for "comptes", data already exists.
+[2025-03-05 15:17:27.893056] - [INFO] - Skipping import for "operations", data already exists.
+[2025-03-05 15:17:27.909992] - [INFO] - Secure bank server started on 127.0.0.1:5001...
+[2025-03-05 15:17:48.959707] - [INFO] - New connection from 127.0.0.1:5001
+[2025-03-05 15:22:42.025840] - [INFO] - Connection closed for 127.0.0.1:5001
+[2025-03-05 15:22:42.440448] - [INFO] - New connection from 127.0.0.1:5001
+[2025-03-05 15:23:20.159508] - [INFO] - Connection closed for 127.0.0.1:5001
+[2025-03-05 15:23:20.567173] - [INFO] - New connection from 127.0.0.1:5001
+[2025-03-05 15:25:38.176325] - [INFO] - Creating the database instance.
+[2025-03-05 15:25:38.194708] - [INFO] - Creating tables in the database.
+[2025-03-05 15:25:38.212259] - [INFO] - Skipping import for "clients", data already exists.
+[2025-03-05 15:25:38.213242] - [INFO] - Skipping import for "comptes", data already exists.
+[2025-03-05 15:25:38.215091] - [INFO] - Skipping import for "operations", data already exists.
+[2025-03-05 15:25:38.229261] - [INFO] - Secure bank server started on 127.0.0.1:5001...
+[2025-03-05 15:26:01.442825] - [INFO] - New connection from 127.0.0.1:5001
+[2025-03-05 15:36:24.258307] - [INFO] - Connection closed for 127.0.0.1:5001
+[2025-03-05 15:36:24.745477] - [INFO] - New connection from 127.0.0.1:5001
+[2025-03-05 15:38:41.120138] - [INFO] - Connection closed for 127.0.0.1:5001
+[2025-03-05 15:38:41.533602] - [INFO] - New connection from 127.0.0.1:5001
+[2025-03-05 15:47:05.174887] - [INFO] - Connection closed for 127.0.0.1:5001
+[2025-03-05 15:47:05.654423] - [INFO] - New connection from 127.0.0.1:5001
+[2025-03-05 15:49:55.630353] - [INFO] - Connection closed for 127.0.0.1:5001
+[2025-03-05 15:49:56.049972] - [INFO] - New connection from 127.0.0.1:5001
+[2025-03-05 15:50:46.850568] - [INFO] - Connection closed for 127.0.0.1:5001
+[2025-03-05 15:50:47.268669] - [INFO] - New connection from 127.0.0.1:5001
+[2025-03-05 19:39:43.073670] - [INFO] - Creating the database instance.
+[2025-03-05 19:39:43.102878] - [INFO] - Creating tables in the database.
+[2025-03-05 19:39:43.115704] - [INFO] - Skipping import for "clients", data already exists.
+[2025-03-05 19:39:43.116460] - [INFO] - Skipping import for "comptes", data already exists.
+[2025-03-05 19:39:43.117292] - [INFO] - Skipping import for "operations", data already exists.
+[2025-03-05 19:39:43.134744] - [INFO] - Secure bank server started on 127.0.0.1:5001...
+[2025-03-05 19:40:02.407135] - [INFO] - New connection from 127.0.0.1:5001
+[2025-03-05 19:42:39.660491] - [INFO] - Connection closed for 127.0.0.1:5001
+[2025-03-05 19:42:41.093339] - [INFO] - New connection from 127.0.0.1:5001
+[2025-03-05 19:44:50.666329] - [INFO] - Connection closed for 127.0.0.1:5001
+[2025-03-05 19:44:51.985263] - [INFO] - New connection from 127.0.0.1:5001
+[2025-03-05 19:47:10.274205] - [INFO] - Connection closed for 127.0.0.1:5001
+[2025-03-05 19:47:11.750868] - [INFO] - New connection from 127.0.0.1:5001
+[2025-03-05 19:48:27.034158] - [INFO] - Creating the database instance.
+[2025-03-05 19:48:27.094677] - [INFO] - Creating tables in the database.
+[2025-03-05 19:48:27.142614] - [INFO] - Importing data from ./database/clients.csv into "clients".
+[2025-03-05 19:48:27.411725] - [INFO] - Data successfully imported into "clients".
+[2025-03-05 19:48:27.414138] - [INFO] - Importing data from ./database/comptes.csv into "comptes".
+[2025-03-05 19:48:28.021824] - [INFO] - Data successfully imported into "comptes".
+[2025-03-05 19:48:28.023959] - [INFO] - Importing data from ./database/operations.csv into "operations".
+[2025-03-05 19:48:53.539425] - [INFO] - Data successfully imported into "operations".
+[2025-03-05 19:48:53.575156] - [INFO] - Secure bank server started on 127.0.0.1:5001...
+[2025-03-05 19:50:40.073678] - [INFO] - Creating the database instance.
+[2025-03-05 19:50:40.134527] - [INFO] - Creating tables in the database.
+[2025-03-05 19:50:40.168565] - [INFO] - Skipping import for "clients", data already exists.
+[2025-03-05 19:50:40.170466] - [INFO] - Skipping import for "comptes", data already exists.
+[2025-03-05 19:50:40.172771] - [INFO] - Skipping import for "operations", data already exists.
+[2025-03-05 19:50:40.207646] - [INFO] - Secure bank server started on 127.0.0.1:5001...
+[2025-03-05 19:51:08.756562] - [INFO] - New connection from 127.0.0.1:5001
+[2025-03-05 19:53:41.273085] - [INFO] - Connection closed for 127.0.0.1:5001
+[2025-03-05 19:53:42.709701] - [INFO] - New connection from 127.0.0.1:5001
+[2025-03-05 19:56:30.071833] - [INFO] - Creating the database instance.
+[2025-03-05 19:56:30.146547] - [INFO] - Creating tables in the database.
+[2025-03-05 19:56:30.214859] - [INFO] - Skipping import for "clients", data already exists.
+[2025-03-05 19:56:30.217507] - [INFO] - Skipping import for "comptes", data already exists.
+[2025-03-05 19:56:30.222006] - [INFO] - Skipping import for "operations", data already exists.
+[2025-03-05 19:56:30.284348] - [INFO] - Secure bank server started on 127.0.0.1:5001...
+[2025-03-05 19:57:29.741226] - [INFO] - New connection from 127.0.0.1:5001
+[2025-03-05 19:57:54.728456] - [INFO] - Connection closed for 127.0.0.1:5001
