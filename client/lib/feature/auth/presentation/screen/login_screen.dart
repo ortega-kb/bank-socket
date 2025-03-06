@@ -1,3 +1,4 @@
+import 'package:client/core/app_logger.dart';
 import 'package:client/core/shared/widget/primary_button.dart';
 import 'package:client/core/theme/theme.dart';
 import 'package:client/core/util/message.dart';
@@ -7,6 +8,7 @@ import 'package:client/feature/auth/presentation/bloc/bloc/auth_bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
+import 'package:client/core/di.dart'; // pour accéder à getIt<AppLogger>()
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -33,6 +35,7 @@ class _LoginScreenState extends State<LoginScreen> {
 
   void _login() {
     if (_formKey.currentState!.validate()) {
+      getIt<AppLogger>().logInfo("Tentative de connexion pour le compte : ${_accountNumberController.text.trim()}");
       context.read<AuthBloc>().add(
         AuthLoginSubmitted(
           accountNumber: _accountNumberController.text.trim(),
@@ -50,8 +53,10 @@ class _LoginScreenState extends State<LoginScreen> {
       body: BlocConsumer<AuthBloc, AuthState>(
         listener: (context, state) {
           if (state is AuthSuccess) {
+            getIt<AppLogger>().logInfo("Connexion réussie pour le compte : ${state.account.accountNumber}");
             context.go(AppRoot.route, extra: state.account.toJson());
           } else if (state is AuthError) {
+            getIt<AppLogger>().logError("Échec de connexion : ${state.message}");
             Message.error(context: context, message: state.message);
           }
         },
@@ -83,14 +88,18 @@ class _LoginScreenState extends State<LoginScreen> {
                               Text(
                                 "Connexion",
                                 textAlign: TextAlign.left,
-                                style: Theme.of(context).textTheme.headlineSmall
+                                style: Theme.of(context)
+                                    .textTheme
+                                    .headlineSmall
                                     ?.copyWith(fontWeight: FontWeight.bold),
                               ),
                               const SizedBox(height: AppDimen.p4),
                               Text(
                                 "Entrez vos informations de connexion.",
                                 textAlign: TextAlign.left,
-                                style: Theme.of(context).textTheme.bodyLarge
+                                style: Theme.of(context)
+                                    .textTheme
+                                    .bodyLarge
                                     ?.copyWith(color: AppColor.gray),
                               ),
                               const SizedBox(height: AppDimen.p16),
@@ -99,8 +108,8 @@ class _LoginScreenState extends State<LoginScreen> {
                                 decoration: InputDecoration(
                                   labelText: "Numéro de compte",
                                 ),
-                                validator:
-                                    (value) => Validator.empty(value, context),
+                                validator: (value) =>
+                                    Validator.empty(value, context),
                               ),
                               const SizedBox(height: AppDimen.p16),
                               TextFormField(
@@ -109,8 +118,8 @@ class _LoginScreenState extends State<LoginScreen> {
                                 decoration: InputDecoration(
                                   labelText: "Code PIN",
                                 ),
-                                validator:
-                                    (value) => Validator.empty(value, context),
+                                validator: (value) =>
+                                    Validator.empty(value, context),
                               ),
                               const SizedBox(height: AppDimen.p32),
                               PrimaryButton(

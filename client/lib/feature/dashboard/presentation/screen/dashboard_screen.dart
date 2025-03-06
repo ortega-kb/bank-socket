@@ -1,3 +1,4 @@
+import 'package:client/core/app_logger.dart';
 import 'package:client/core/data/models/account.dart';
 import 'package:client/core/shared/widget/atm_speed_dial.dart';
 import 'package:client/core/shared/widget/primary_button.dart';
@@ -16,6 +17,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
+import 'package:client/core/di.dart'; // pour accéder à getIt<AppLogger>()
 
 class AppRoot extends StatefulWidget {
   const AppRoot({super.key, required this.account});
@@ -32,6 +34,9 @@ class _AppRootState extends State<AppRoot> {
   @override
   void initState() {
     super.initState();
+    getIt<AppLogger>().logInfo(
+      "AppRoot initialisé pour le compte ${widget.account.accountNumber}",
+    );
     _initializeDashboard();
   }
 
@@ -50,7 +55,10 @@ class _AppRootState extends State<AppRoot> {
   final _accountDstController = TextEditingController();
   final _pinController = TextEditingController();
 
-  _onWithdraw(double amount, int accountNumber, int pinCode) {
+  void _onWithdraw(double amount, int accountNumber, int pinCode) {
+    getIt<AppLogger>().logInfo(
+      "Demande de retrait: montant $amount, compte $accountNumber",
+    );
     context.read<WithdrawBloc>().add(
       WithdrawRequested(
         accountNumber: accountNumber,
@@ -60,7 +68,10 @@ class _AppRootState extends State<AppRoot> {
     );
   }
 
-  _onDeposit(double amount, int accountNumber, int pinCode) {
+  void _onDeposit(double amount, int accountNumber, int pinCode) {
+    getIt<AppLogger>().logInfo(
+      "Demande de dépôt: montant $amount, compte $accountNumber",
+    );
     context.read<DepositBloc>().add(
       DepositRequested(
         accountNumber: accountNumber,
@@ -70,7 +81,15 @@ class _AppRootState extends State<AppRoot> {
     );
   }
 
-  _onTransfer(double amount, int srcAccount, int destAccount, int pinCode) {
+  void _onTransfer(
+    double amount,
+    int srcAccount,
+    int destAccount,
+    int pinCode,
+  ) {
+    getIt<AppLogger>().logInfo(
+      "Demande de transfert: montant $amount, de ${widget.account.accountNumber} vers $destAccount",
+    );
     context.read<TransferBloc>().add(
       TransferRequested(
         amount: amount,
@@ -81,7 +100,10 @@ class _AppRootState extends State<AppRoot> {
     );
   }
 
-  _onDownloadHistory() async {
+  void _onDownloadHistory() async {
+    getIt<AppLogger>().logInfo(
+      "Demande de téléchargement de l'historique pour le compte ${widget.account.accountNumber}",
+    );
     context.read<DownloadBloc>().add(
       DownloadRequested(widget.account.accountNumber),
     );
@@ -97,6 +119,7 @@ class _AppRootState extends State<AppRoot> {
     required GlobalKey<FormState> formKey,
     List<Widget> additionalFields = const [],
   }) {
+    getIt<AppLogger>().logInfo("Affichage de la boîte de dialogue: $title");
     showDialog(
       context: context,
       builder: (BuildContext context) {
@@ -119,7 +142,12 @@ class _AppRootState extends State<AppRoot> {
           ),
           actions: [
             TextButton(
-              onPressed: () => Navigator.pop(context),
+              onPressed: () {
+                getIt<AppLogger>().logInfo(
+                  "Annulation de la boîte de dialogue: $title",
+                );
+                Navigator.pop(context);
+              },
               child: const Text("Annuler"),
             ),
             PrimaryButton(text: buttonText, onPressed: onPressed),
@@ -139,6 +167,9 @@ class _AppRootState extends State<AppRoot> {
       formKey: _pinFormKey,
       onPressed: () {
         if (_pinFormKey.currentState!.validate()) {
+          getIt<AppLogger>().logInfo(
+            "Code PIN validé, confirmation de l'opération",
+          );
           Navigator.pop(context); // Ferme le dialogue PIN
           onConfirm(); // Exécute l'opération après validation
         }
@@ -253,6 +284,9 @@ class _AppRootState extends State<AppRoot> {
   }
 
   void _initializeDashboard() {
+    getIt<AppLogger>().logInfo(
+      "Chargement du dashboard pour le compte ${widget.account.accountNumber}",
+    );
     context.read<DashboardBloc>().add(
       DashboardLoadRequested(widget.account.accountNumber),
     );
@@ -265,15 +299,20 @@ class _AppRootState extends State<AppRoot> {
         BlocListener<WithdrawBloc, WithdrawState>(
           listener: (context, state) {
             if (state is WithdrawSuccess) {
+              getIt<AppLogger>().logInfo(
+                "Retrait réussi pour le compte ${widget.account.accountNumber}",
+              );
               Message.success(
                 context: context,
-                message: "Retrait effectue avec succes",
+                message: "Retrait effectué avec succès",
               );
-
               _amountWithdrawController.clear();
               _pinController.clear();
               _initializeDashboard();
             } else if (state is WithdrawError) {
+              getIt<AppLogger>().logError(
+                "Erreur lors du retrait: ${state.message}",
+              );
               _amountWithdrawController.clear();
               _pinController.clear();
               Message.error(context: context, message: state.message);
@@ -283,16 +322,21 @@ class _AppRootState extends State<AppRoot> {
         BlocListener<DepositBloc, DepositState>(
           listener: (context, state) {
             if (state is DepositSuccess) {
+              getIt<AppLogger>().logInfo(
+                "Dépôt réussi pour le compte ${widget.account.accountNumber}",
+              );
               Message.success(
                 context: context,
-                message: "Depot effectue avec succes",
+                message: "Dépôt effectué avec succès",
               );
-
               _amountDepositController.clear();
               _pinController.clear();
               _initializeDashboard();
             } else if (state is DepositError) {
-              _amountWithdrawController.clear();
+              getIt<AppLogger>().logError(
+                "Erreur lors du dépôt: ${state.message}",
+              );
+              _amountDepositController.clear();
               _pinController.clear();
               Message.error(context: context, message: state.message);
             }
@@ -301,16 +345,21 @@ class _AppRootState extends State<AppRoot> {
         BlocListener<TransferBloc, TransferState>(
           listener: (context, state) {
             if (state is TransferSuccess) {
+              getIt<AppLogger>().logInfo(
+                "Transfert réussi pour le compte ${widget.account.accountNumber}",
+              );
               Message.success(
                 context: context,
-                message: "Transfert effectue avec succes",
+                message: "Transfert effectué avec succès",
               );
-
               _amountTransferController.clear();
               _accountDstController.clear();
               _pinController.clear();
               _initializeDashboard();
             } else if (state is TransferError) {
+              getIt<AppLogger>().logError(
+                "Erreur lors du transfert: ${state.message}",
+              );
               _amountTransferController.clear();
               _pinController.clear();
               Message.error(context: context, message: state.message);
@@ -320,11 +369,17 @@ class _AppRootState extends State<AppRoot> {
         BlocListener<DownloadBloc, DownloadState>(
           listener: (context, state) {
             if (state is DownloadSuccess) {
+              getIt<AppLogger>().logInfo(
+                "Téléchargement de l'historique réussi pour le compte ${widget.account.accountNumber}",
+              );
               Message.success(
                 context: context,
-                message: "Telechargement effectue avec succes",
+                message: "Téléchargement effectué avec succès",
               );
             } else if (state is DownloadError) {
+              getIt<AppLogger>().logError(
+                "Erreur lors du téléchargement: ${state.message}",
+              );
               Message.error(context: context, message: state.message);
             }
           },
@@ -343,7 +398,12 @@ class _AppRootState extends State<AppRoot> {
                 "Se déconnecter",
                 style: TextStyle(color: Colors.red),
               ),
-              onPressed: () => context.go(LoginScreen.route),
+              onPressed: () {
+                getIt<AppLogger>().logInfo(
+                  "Déconnexion demandée pour le compte ${widget.account.accountNumber}",
+                );
+                context.go(LoginScreen.route);
+              },
             ),
             const SizedBox(width: AppDimen.p16),
           ],
