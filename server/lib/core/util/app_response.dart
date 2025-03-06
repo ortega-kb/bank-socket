@@ -16,5 +16,7 @@ class AppResponse {
   static const String balanceOk = 'BALANCE OK';
   static const String downloadOk = 'DOWNLOAD OK';
 
+  static const String registerOk = 'REGISTER OK';
+
   static const String history = 'HISTORY';
 }

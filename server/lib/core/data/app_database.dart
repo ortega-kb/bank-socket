@@ -39,7 +39,8 @@ class AppDatabase {
         CodePostal INTEGER,
         Ville TEXT,
         TelephoneFixe INTEGER,
-        TelephonePortable INTEGER
+        TelephonePortable INTEGER,
+        UNIQUE(TelephoneFixe, TelephonePortable)
       )
     ''');
 

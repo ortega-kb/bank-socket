@@ -8,5 +8,6 @@ abstract class ClientRepository {
   Future<SocketResponse> history(String request);
   Future<SocketResponse> transfer(String request);
   Future<SocketResponse> historyCSV(String request);
+  Future<SocketResponse> register(String request);
   Future<SocketResponse> downloadFile(String filePath);
 }

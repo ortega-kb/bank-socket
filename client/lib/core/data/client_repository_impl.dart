@@ -101,4 +101,9 @@ class ClientRepositoryImpl extends ClientRepository {
   Future<SocketResponse> historyCSV(String request) async {
     return await _sendRequest(request);
   }
+
+  @override
+  Future<SocketResponse> register(String request) async {
+    return await _sendRequest(request);
+  }
 }

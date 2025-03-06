@@ -12,7 +12,7 @@ class AppOperation {
 
   const AppOperation(this._database);
 
-  // Utility method to get the balance of an account
+  // Méthode utilitaire pour récupérer le solde d'un compte
   double _getBalance(int accountNumber) {
     final result = _database.select(
       'SELECT Solde FROM comptes WHERE NumeroCompte = ?',
@@ -24,7 +24,7 @@ class AppOperation {
     return result.isNotEmpty ? result.first['Solde'] : 0.0;
   }
 
-  // Utility method to record an operation in the 'operations' table
+  // Méthode utilitaire pour enregistrer une opération dans la table operations
   void _recordOperation(int accountNumber, String libelle, double montant) {
     _database.execute(
       'INSERT INTO operations (NumeroCompte, DateOperation, LibelleOperation, Montant) VALUES (?, ?, ?, ?)',
@@ -35,12 +35,58 @@ class AppOperation {
     );
   }
 
-  // Centralized method to encode responses to JSON
+  // Méthode centralisée pour encoder la réponse en JSON
   String _encodeResponse(String status, dynamic data) {
     return jsonEncode({'status': status, 'data': data});
   }
 
-  // Test PIN method, with detailed JSON response
+  // Méthode pour créer un compte associé à un client
+  String _register(String jsonPayload) {
+    try {
+      final user = jsonDecode(jsonPayload);
+      // Extraction des données du client
+      final firstName = user['first_name'];
+      final lastName = user['last_name'];
+      final address = user['address'];
+      final postalCode = user['postal_code'];
+      final town = user['town'];
+      final fixPhone = user['fix_phone'];
+      final portablePhone = user['portable_phone'];
+      final accountType = user['account_type'];
+      final pinCode = user['pin_code'];
+
+      // Insertion dans la table clients
+      _database.execute(
+        'INSERT INTO clients (Prenom, Nom, Adresse, CodePostal, Ville, TelephoneFixe, TelephonePortable) VALUES (?, ?, ?, ?, ?, ?, ?)',
+        [
+          firstName,
+          lastName,
+          address,
+          postalCode,
+          town,
+          fixPhone,
+          portablePhone,
+        ],
+      );
+      final clientId = _database.lastInsertRowId;
+      _database.execute(
+        'INSERT INTO comptes (NumeroClient, TypeCompte, PIN, Solde) VALUES (?, ?, ?, ?)',
+        [clientId, accountType, pinCode, 0.0],
+      );
+      final accountId = _database.lastInsertRowId;
+
+      getIt<AppLogger>().logInfo(
+        'REGISTER: Compte créé pour le client $clientId avec le compte $accountId.',
+      );
+      return _encodeResponse(AppResponse.registerOk, accountId);
+    } catch (e) {
+      getIt<AppLogger>().logError(
+        "REGISTER: Erreur lors de la création du compte: $e",
+      );
+      return _encodeResponse(AppResponse.errOperation, e.toString());
+    }
+  }
+
   String _testPin(List<String> parts) {
     if (parts.length != 3) {
       getIt<AppLogger>().logWarning('TESTPIN: Nombre d’arguments incorrect.');
@@ -87,7 +133,7 @@ class AppOperation {
     return _encodeResponse(AppResponse.testPinNok, null);
   }
 
-  // Withdraw money method with operation recording
+  // Méthode de retrait d'argent avec enregistrement de l'opération
   String _withdraw(List<String> parts) {
     if (parts.length != 3) {
       getIt<AppLogger>().logWarning('WITHDRAW: Nombre d’arguments incorrect.');
@@ -123,7 +169,7 @@ class AppOperation {
     return _encodeResponse(AppResponse.withdrawNok, "Montant insuffisant");
   }
 
-  // Deposit money method with operation recording
+  // Méthode de dépôt d'argent avec enregistrement de l'opération
   String _deposit(List<String> parts) {
     if (parts.length != 3) {
       getIt<AppLogger>().logWarning('DEPOSIT: Nombre d’arguments incorrect.');
@@ -151,7 +197,7 @@ class AppOperation {
     return _encodeResponse(AppResponse.depositOk, null);
   }
 
-  // Transfer money method with operation recording
+  // Méthode de transfert d'argent avec enregistrement de l'opération
   String _transfer(List<String> parts) {
     if (parts.length != 4) {
       getIt<AppLogger>().logWarning('TRANSFER: Nombre d’arguments incorrect.');
@@ -197,7 +243,7 @@ class AppOperation {
     return _encodeResponse(AppResponse.tranferNok, 'Montant insuffisant');
   }
 
-  // Get balance of an account
+  // Méthode pour obtenir le solde d'un compte
   String _balance(List<String> parts) {
     if (parts.length != 2) {
       getIt<AppLogger>().logWarning('BALANCE: Nombre d’arguments incorrect.');
@@ -219,7 +265,6 @@ class AppOperation {
         : _encodeResponse(AppResponse.errOperation, null);
   }
 
-  // Get account operation history in JSON format
   String _history(List<String> parts) {
     if (parts.length != 2) {
       getIt<AppLogger>().logWarning('HISTORY: Nombre d’arguments incorrect.');
@@ -261,7 +306,7 @@ class AppOperation {
     return _encodeResponse(AppResponse.history, history);
   }
 
-  // Get account operations and generate csv file.
+  // Méthode pour générer un fichier CSV de l'historique des opérations d'un compte.
   String _historyCSV(List<String> parts) {
     if (parts.length != 2) {
       getIt<AppLogger>().logWarning(
@@ -316,7 +361,6 @@ class AppOperation {
     return _encodeResponse(AppResponse.history, filePath);
   }
 
-  // Téléchargement d'un fichier: lit le fichier et renvoie son contenu encodé en base64.
   String _downloadFile(List<String> parts) {
     if (parts.length != 2) {
       getIt<AppLogger>().logWarning('DOWNLOAD: Nombre d’arguments incorrect.');
@@ -349,8 +393,13 @@ class AppOperation {
     }
   }
 
-  // Process the operation based on the request
   String processOperation(String request) {
+    // On gère ici le cas particulier de REGISTER qui contient une charge JSON
+    if (request.startsWith('REGISTER ')) {
+      final jsonPayload = request.substring('REGISTER '.length);
+      return _register(jsonPayload);
+    }
+
     final parts = request.split(' ');
     if (parts.isEmpty) {
       getIt<AppLogger>().logWarning('PROCESS: Commande vide reçue.');

@@ -586,7 +586,7 @@ class BuildBodySection extends StatelessWidget {
                                         )
                                         .toList()
                                     : List.generate(
-                                      5,
+                                      1,
                                       (index) => DataRow(
                                         cells: [
                                           DataCell(Text("No data yet")),

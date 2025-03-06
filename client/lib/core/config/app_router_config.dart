@@ -1,12 +1,14 @@
 import 'package:client/core/data/models/account.dart';
 import 'package:client/core/di.dart';
+import 'package:client/feature/auth/presentation/bloc/register/register_bloc.dart';
+import 'package:client/feature/auth/presentation/screen/register_screen.dart';
 import 'package:client/feature/dashboard/presentation/bloc/dashboard/dashboard_bloc.dart';
 import 'package:client/feature/dashboard/presentation/bloc/deposit/deposit_bloc.dart';
 import 'package:client/feature/dashboard/presentation/bloc/download/download_bloc.dart';
 import 'package:client/feature/dashboard/presentation/bloc/transfer/transfer_bloc.dart';
 import 'package:client/feature/dashboard/presentation/bloc/withdraw/withdraw_bloc.dart';
 import 'package:client/feature/dashboard/presentation/screen/dashboard_screen.dart';
-import 'package:client/feature/auth/presentation/bloc/bloc/auth_bloc.dart';
+import 'package:client/feature/auth/presentation/bloc/auth/auth_bloc.dart';
 import 'package:client/feature/auth/presentation/screen/login_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -30,6 +32,16 @@ class AppRouterConfig {
             child: LoginScreen(),
           );
         },
+        routes: [
+          GoRoute(
+            path: RegisterScreen.path,
+            builder:
+                (context, state) => BlocProvider(
+                  create: (context) => getIt<RegisterBloc>(),
+                  child: RegisterScreen(),
+                ),
+          ),
+        ],
       ),
       GoRoute(
         path: AppRoot.path,

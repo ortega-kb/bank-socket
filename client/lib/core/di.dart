@@ -5,7 +5,8 @@ import 'package:client/core/config/config.dart';
 import 'package:client/core/data/client_repository.dart';
 import 'package:client/core/data/client_repository_impl.dart';
 import 'package:client/core/security.dart';
-import 'package:client/feature/auth/presentation/bloc/bloc/auth_bloc.dart';
+import 'package:client/feature/auth/presentation/bloc/auth/auth_bloc.dart';
+import 'package:client/feature/auth/presentation/bloc/register/register_bloc.dart';
 import 'package:client/feature/dashboard/presentation/bloc/dashboard/dashboard_bloc.dart';
 import 'package:client/feature/dashboard/presentation/bloc/deposit/deposit_bloc.dart';
 import 'package:client/feature/dashboard/presentation/bloc/download/download_bloc.dart';
@@ -49,6 +50,7 @@ Future<void> initializeApp() async {
 
 void _initializeAuth() async {
   getIt.registerFactory(() => AuthBloc(getIt()));
+  getIt.registerFactory(() => RegisterBloc(getIt()));
 }
 
 void _initializeDashboard() async {
