@@ -14,10 +14,9 @@ import 'package:client/feature/dashboard/presentation/bloc/transfer/transfer_blo
 import 'package:client/feature/dashboard/presentation/bloc/withdraw/withdraw_bloc.dart';
 import 'package:fluentui_system_icons/fluentui_system_icons.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
-import 'package:client/core/di.dart'; // pour accéder à getIt<AppLogger>()
+import 'package:client/core/di.dart';
 
 class AppRoot extends StatefulWidget {
   const AppRoot({super.key, required this.account});
@@ -393,6 +392,11 @@ class _AppRootState extends State<AppRoot> {
             style: Theme.of(context).textTheme.bodyLarge,
           ),
           actions: [
+            IconButton(
+              onPressed: () => _initializeDashboard(),
+              icon: Icon(Icons.refresh),
+            ),
+            const SizedBox(width: AppDimen.p2),
             TextButton(
               child: Text(
                 "Se déconnecter",

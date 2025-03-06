@@ -18,9 +18,11 @@ import 'package:logger/web.dart';
 final getIt = GetIt.asNewInstance();
 
 Future<void> initializeApp() async {
+  await dotenv.load(fileName: ".env");
+
   getIt.registerLazySingleton(() => Logger());
 
-  final config = Config(DotEnv()..load());
+  final config = await Config.load();
   getIt.registerLazySingleton(() => config);
 
   getIt.registerLazySingleton(() => AppLogger(Logger()));

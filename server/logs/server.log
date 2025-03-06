@@ -605,3 +605,99 @@
 [2025-03-06 02:48:28.753406] - [INFO] - HISTORY: Historique récupéré pour le compte 20.
 [2025-03-06 02:48:47.847985] - [WARNING] - TESTPIN échoué pour le compte 20
 [2025-03-06 02:48:58.089381] - [INFO] - Connection closed for 127.0.0.1:5001
+[2025-03-06 02:49:33.994991] - [INFO] - Creating the database instance.
+[2025-03-06 02:49:34.014051] - [INFO] - Creating tables in the database.
+[2025-03-06 02:49:34.026885] - [INFO] - Skipping import for "clients", data already exists.
+[2025-03-06 02:49:34.028394] - [INFO] - Skipping import for "comptes", data already exists.
+[2025-03-06 02:49:34.029829] - [INFO] - Skipping import for "operations", data already exists.
+[2025-03-06 02:49:34.043254] - [INFO] - Secure bank server started on 127.0.0.1:5001...
+[2025-03-06 02:52:33.231863] - [INFO] - New connection from 127.0.0.1:5001
+[2025-03-06 02:52:56.256747] - [INFO] - New connection from 127.0.0.1:5001
+[2025-03-06 02:53:14.781079] - [INFO] - TESTPIN réussi pour le compte 20
+[2025-03-06 02:53:15.016635] - [INFO] - Récupération du solde pour le compte 20
+[2025-03-06 02:53:15.017237] - [INFO] - Balance du compte 20: 1590.83
+[2025-03-06 02:53:15.052247] - [INFO] - HISTORY: Historique récupéré pour le compte 20.
+[2025-03-06 02:53:20.551252] - [INFO] - Récupération du solde pour le compte 20
+[2025-03-06 02:53:20.554747] - [INFO] - Balance du compte 20: 1590.83
+[2025-03-06 02:53:20.581125] - [INFO] - HISTORY: Historique récupéré pour le compte 20.
+[2025-03-06 02:53:22.296919] - [INFO] - Récupération du solde pour le compte 20
+[2025-03-06 02:53:22.299069] - [INFO] - Balance du compte 20: 1590.83
+[2025-03-06 02:53:22.320816] - [INFO] - HISTORY: Historique récupéré pour le compte 20.
+[2025-03-06 02:53:30.994737] - [INFO] - TESTPIN réussi pour le compte 1
+[2025-03-06 02:53:31.185369] - [INFO] - Récupération du solde pour le compte 1
+[2025-03-06 02:53:31.186069] - [INFO] - Balance du compte 1: 10953.78
+[2025-03-06 02:53:31.189954] - [INFO] - HISTORY: Historique récupéré pour le compte 1.
+[2025-03-06 02:54:05.216534] - [INFO] - HISTORY_CSV: Fichier CSV généré pour le compte 20: ./files/history_csv_20_2025-03-06T02_54_05.192950.csv
+[2025-03-06 02:54:05.228944] - [INFO] - DOWNLOAD: Fichier ./files/history_csv_20_2025-03-06T02_54_05.192950.csv envoyé avec succès.
+[2025-03-06 02:54:06.918683] - [INFO] - HISTORY_CSV: Fichier CSV généré pour le compte 1: ./files/history_csv_1_2025-03-06T02_54_06.912076.csv
+[2025-03-06 02:54:06.932534] - [INFO] - DOWNLOAD: Fichier ./files/history_csv_1_2025-03-06T02_54_06.912076.csv envoyé avec succès.
+[2025-03-06 02:54:14.870960] - [INFO] - Connection closed for 127.0.0.1:5001
+[2025-03-06 02:54:16.672899] - [INFO] - Connection closed for 127.0.0.1:5001
+[2025-03-06 02:58:08.247391] - [INFO] - New connection from 127.0.0.1:5001
+[2025-03-06 02:58:56.874735] - [INFO] - Connection closed for 127.0.0.1:5001
+[2025-03-06 03:01:34.752366] - [INFO] - New connection from 127.0.0.1:5001
+[2025-03-06 03:04:12.822779] - [INFO] - New connection from 127.0.0.1:5001
+[2025-03-06 03:04:18.688350] - [INFO] - Connection closed for 127.0.0.1:5001
+[2025-03-06 03:04:20.421329] - [INFO] - Connection closed for 127.0.0.1:5001
+[2025-03-06 03:14:59.176504] - [INFO] - Creating the database instance.
+[2025-03-06 03:14:59.201070] - [INFO] - Creating tables in the database.
+[2025-03-06 03:14:59.218172] - [INFO] - Skipping import for "clients", data already exists.
+[2025-03-06 03:14:59.219226] - [INFO] - Skipping import for "comptes", data already exists.
+[2025-03-06 03:14:59.220292] - [INFO] - Skipping import for "operations", data already exists.
+[2025-03-06 03:14:59.241512] - [INFO] - Secure bank server started on 127.0.0.1:5001...
+[2025-03-06 03:15:16.227473] - [INFO] - New connection from 127.0.0.1:5001
+[2025-03-06 03:15:45.654266] - [INFO] - Connection closed for 127.0.0.1:5001
+[2025-03-06 03:15:56.391439] - [INFO] - New connection from 127.0.0.1:5001
+[2025-03-06 03:17:54.396571] - [INFO] - Connection closed for 127.0.0.1:5001
+[2025-03-06 03:17:54.984730] - [INFO] - New connection from 127.0.0.1:5001
+[2025-03-06 03:18:01.365960] - [INFO] - TESTPIN réussi pour le compte 20
+[2025-03-06 03:18:01.586285] - [INFO] - Récupération du solde pour le compte 20
+[2025-03-06 03:18:01.586970] - [INFO] - Balance du compte 20: 1590.83
+[2025-03-06 03:18:01.593341] - [INFO] - HISTORY: Historique récupéré pour le compte 20.
+[2025-03-06 03:18:05.604870] - [INFO] - HISTORY_CSV: Fichier CSV généré pour le compte 20: ./files/history_csv_20_2025-03-06T03_18_05.591456.csv
+[2025-03-06 03:18:05.617433] - [INFO] - DOWNLOAD: Fichier ./files/history_csv_20_2025-03-06T03_18_05.591456.csv envoyé avec succès.
+[2025-03-06 03:18:07.637150] - [INFO] - Récupération du solde pour le compte 20
+[2025-03-06 03:18:07.638348] - [INFO] - Balance du compte 20: 1590.83
+[2025-03-06 03:18:07.653450] - [INFO] - HISTORY: Historique récupéré pour le compte 20.
+[2025-03-06 03:18:08.507973] - [INFO] - Récupération du solde pour le compte 20
+[2025-03-06 03:18:08.509541] - [INFO] - Balance du compte 20: 1590.83
+[2025-03-06 03:18:08.526032] - [INFO] - HISTORY: Historique récupéré pour le compte 20.
+[2025-03-06 03:18:11.301820] - [INFO] - Récupération du solde pour le compte 20
+[2025-03-06 03:18:11.303392] - [INFO] - Balance du compte 20: 1590.83
+[2025-03-06 03:18:11.323708] - [INFO] - HISTORY: Historique récupéré pour le compte 20.
+[2025-03-06 03:18:14.458697] - [INFO] - Connection closed for 127.0.0.1:5001
+[2025-03-06 03:19:20.610227] - [INFO] - New connection from 127.0.0.1:5001
+[2025-03-06 03:23:14.290303] - [INFO] - New connection from 127.0.0.1:5001
+[2025-03-06 03:23:17.963805] - [INFO] - TESTPIN réussi pour le compte 20
+[2025-03-06 03:23:18.026281] - [INFO] - Récupération du solde pour le compte 20
+[2025-03-06 03:23:18.026878] - [INFO] - Balance du compte 20: 1590.83
+[2025-03-06 03:23:18.030024] - [INFO] - HISTORY: Historique récupéré pour le compte 20.
+[2025-03-06 03:23:28.675795] - [INFO] - Connection closed for 127.0.0.1:5001
+[2025-03-06 03:23:54.505662] - [INFO] - Connection closed for 127.0.0.1:5001
+[2025-03-06 03:24:22.868351] - [INFO] - New connection from 127.0.0.1:5001
+[2025-03-06 03:24:31.690655] - [INFO] - New connection from 127.0.0.1:5001
+[2025-03-06 03:24:50.043664] - [INFO] - TESTPIN réussi pour le compte 20
+[2025-03-06 03:24:50.111548] - [INFO] - Récupération du solde pour le compte 20
+[2025-03-06 03:24:50.112038] - [INFO] - Balance du compte 20: 1590.83
+[2025-03-06 03:24:50.118025] - [INFO] - HISTORY: Historique récupéré pour le compte 20.
+[2025-03-06 03:24:56.848156] - [INFO] - TESTPIN réussi pour le compte 1
+[2025-03-06 03:24:56.890394] - [INFO] - Récupération du solde pour le compte 1
+[2025-03-06 03:24:56.890934] - [INFO] - Balance du compte 1: 10953.78
+[2025-03-06 03:24:56.894279] - [INFO] - HISTORY: Historique récupéré pour le compte 1.
+[2025-03-06 03:25:25.513048] - [INFO] - TESTPIN réussi pour le compte 1
+[2025-03-06 03:25:25.526098] - [INFO] - Récupération du solde pour le compte 1
+[2025-03-06 03:25:25.545330] - [INFO] - Opération enregistrée: Transfer to 20 de 5000.0 sur le compte 1
+[2025-03-06 03:25:25.551960] - [INFO] - Opération enregistrée: Transfer received from 1 de 5000.0 sur le compte 20
+[2025-03-06 03:25:25.553386] - [INFO] - Transfert de 5000.0 de 1 vers 20 effectué.
+[2025-03-06 03:25:25.564121] - [INFO] - Récupération du solde pour le compte 1
+[2025-03-06 03:25:25.564552] - [INFO] - Balance du compte 1: 5953.780000000001
+[2025-03-06 03:25:25.572593] - [INFO] - HISTORY: Historique récupéré pour le compte 1.
+[2025-03-06 03:25:27.905269] - [INFO] - Récupération du solde pour le compte 20
+[2025-03-06 03:25:27.906714] - [INFO] - Balance du compte 20: 6590.83
+[2025-03-06 03:25:27.915081] - [INFO] - HISTORY: Historique récupéré pour le compte 20.
+[2025-03-06 03:25:39.655314] - [INFO] - HISTORY_CSV: Fichier CSV généré pour le compte 20: ./files/history_csv_20_2025-03-06T03_25_39.652072.csv
+[2025-03-06 03:25:39.662362] - [INFO] - DOWNLOAD: Fichier ./files/history_csv_20_2025-03-06T03_25_39.652072.csv envoyé avec succès.
+[2025-03-06 03:25:40.944575] - [INFO] - HISTORY_CSV: Fichier CSV généré pour le compte 1: ./files/history_csv_1_2025-03-06T03_25_40.940911.csv
+[2025-03-06 03:25:40.952658] - [INFO] - DOWNLOAD: Fichier ./files/history_csv_1_2025-03-06T03_25_40.940911.csv envoyé avec succès.
+[2025-03-06 03:25:45.772726] - [INFO] - Connection closed for 127.0.0.1:5001
+[2025-03-06 03:25:46.962384] - [INFO] - Connection closed for 127.0.0.1:5001
