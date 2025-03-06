@@ -14,6 +14,7 @@ class AppResponse {
   static const String tranferNok = 'TRANSFER NOK';
 
   static const String balanceOk = 'BALANCE OK';
+  static const String downloadOk = 'DOWNLOAD OK';
 
   static const String history = 'HISTORY';
 }

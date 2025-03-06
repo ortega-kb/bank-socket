@@ -2,6 +2,7 @@ import 'package:client/core/data/models/account.dart';
 import 'package:client/core/di.dart';
 import 'package:client/feature/dashboard/presentation/bloc/dashboard/dashboard_bloc.dart';
 import 'package:client/feature/dashboard/presentation/bloc/deposit/deposit_bloc.dart';
+import 'package:client/feature/dashboard/presentation/bloc/download/download_bloc.dart';
 import 'package:client/feature/dashboard/presentation/bloc/transfer/transfer_bloc.dart';
 import 'package:client/feature/dashboard/presentation/bloc/withdraw/withdraw_bloc.dart';
 import 'package:client/feature/dashboard/presentation/screen/dashboard_screen.dart';
@@ -41,6 +42,7 @@ class AppRouterConfig {
               BlocProvider(create: (context) => getIt<WithdrawBloc>()),
               BlocProvider(create: (context) => getIt<DepositBloc>()),
               BlocProvider(create: (context) => getIt<TransferBloc>()),
+              BlocProvider(create: (context) => getIt<DownloadBloc>()),
             ],
             child: AppRoot(account: account),
           );

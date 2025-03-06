@@ -8,6 +8,7 @@ import 'package:client/core/util/validator.dart';
 import 'package:client/feature/auth/presentation/screen/login_screen.dart';
 import 'package:client/feature/dashboard/presentation/bloc/dashboard/dashboard_bloc.dart';
 import 'package:client/feature/dashboard/presentation/bloc/deposit/deposit_bloc.dart';
+import 'package:client/feature/dashboard/presentation/bloc/download/download_bloc.dart';
 import 'package:client/feature/dashboard/presentation/bloc/transfer/transfer_bloc.dart';
 import 'package:client/feature/dashboard/presentation/bloc/withdraw/withdraw_bloc.dart';
 import 'package:fluentui_system_icons/fluentui_system_icons.dart';
@@ -77,6 +78,12 @@ class _AppRootState extends State<AppRoot> {
         destAccount: destAccount,
         pinCode: pinCode,
       ),
+    );
+  }
+
+  _onDownloadHistory() async {
+    context.read<DownloadBloc>().add(
+      DownloadRequested(widget.account.accountNumber),
     );
   }
 
@@ -310,6 +317,18 @@ class _AppRootState extends State<AppRoot> {
             }
           },
         ),
+        BlocListener<DownloadBloc, DownloadState>(
+          listener: (context, state) {
+            if (state is DownloadSuccess) {
+              Message.success(
+                context: context,
+                message: "Telechargement effectue avec succes",
+              );
+            } else if (state is DownloadError) {
+              Message.error(context: context, message: state.message);
+            }
+          },
+        ),
       ],
       child: Scaffold(
         appBar: AppBar(
@@ -332,7 +351,14 @@ class _AppRootState extends State<AppRoot> {
         body: Padding(
           padding: const EdgeInsets.all(16.0),
           child: CustomScrollView(
-            slivers: [BuildHeaderSection(), BuildBodySection()],
+            slivers: [
+              BuildHeaderSection(),
+              BuildBodySection(
+                onDownloadHistory: () {
+                  _onDownloadHistory();
+                },
+              ),
+            ],
           ),
         ),
         floatingActionButton: AtmSpeedDial(
@@ -385,11 +411,8 @@ class BuildHeaderSection extends StatelessWidget {
 }
 
 class BuildBodySection extends StatelessWidget {
-  const BuildBodySection({super.key});
-
-  void _downloadHistory() {
-    Clipboard.setData(const ClipboardData(text: "Historique téléchargé"));
-  }
+  const BuildBodySection({super.key, required this.onDownloadHistory});
+  final Function()? onDownloadHistory;
 
   @override
   Widget build(BuildContext context) {
@@ -405,37 +428,42 @@ class BuildBodySection extends StatelessWidget {
             color: Theme.of(context).colorScheme.surface,
             borderRadius: BorderRadius.circular(AppDimen.p12),
           ),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.stretch,
-            children: [
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          child: BlocBuilder<DashboardBloc, DashboardState>(
+            builder: (context, state) {
+              return Column(
+                crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
-                  Text(
-                    "Historique",
-                    style: Theme.of(context).textTheme.titleLarge?.copyWith(
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                  TextButton.icon(
-                    onPressed: _downloadHistory,
-                    icon: Icon(FluentIcons.arrow_download_24_filled),
-                    label: Text("Télécharger"),
-                  ),
-                ],
-              ),
-              const SizedBox(height: AppDimen.p16),
-              LayoutBuilder(
-                builder: (context, constraints) {
-                  return SingleChildScrollView(
-                    scrollDirection: Axis.horizontal,
-                    child: ConstrainedBox(
-                      constraints: BoxConstraints(
-                        minWidth: constraints.maxWidth,
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        "Historique",
+                        style: Theme.of(context).textTheme.titleLarge?.copyWith(
+                          fontWeight: FontWeight.bold,
+                        ),
                       ),
-                      child: BlocBuilder<DashboardBloc, DashboardState>(
-                        builder: (context, state) {
-                          return DataTable(
+                      TextButton.icon(
+                        onPressed:
+                            (state is DashboardLoaded)
+                                ? state.histories.isEmpty
+                                    ? null
+                                    : onDownloadHistory
+                                : null,
+                        icon: Icon(FluentIcons.arrow_download_24_filled),
+                        label: Text("Télécharger"),
+                      ),
+                    ],
+                  ),
+                  const SizedBox(height: AppDimen.p16),
+                  LayoutBuilder(
+                    builder: (context, constraints) {
+                      return SingleChildScrollView(
+                        scrollDirection: Axis.horizontal,
+                        child: ConstrainedBox(
+                          constraints: BoxConstraints(
+                            minWidth: constraints.maxWidth,
+                          ),
+                          child: DataTable(
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(AppDimen.p16),
                             ),
@@ -503,14 +531,14 @@ class BuildBodySection extends StatelessWidget {
                                         ],
                                       ),
                                     ),
-                          );
-                        },
-                      ),
-                    ),
-                  );
-                },
-              ),
-            ],
+                          ),
+                        ),
+                      );
+                    },
+                  ),
+                ],
+              );
+            },
           ),
         ),
       ),

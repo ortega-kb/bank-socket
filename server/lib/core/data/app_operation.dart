@@ -1,4 +1,8 @@
 import 'dart:convert';
+import 'dart:io';
+import 'package:csv/csv.dart';
+import 'package:server/core/config/app_config.dart';
+import 'package:server/core/di.dart';
 import 'package:server/core/util/app_response.dart';
 import 'package:sqlite3/sqlite3.dart';
 
@@ -196,6 +200,72 @@ class AppOperation {
     return _encodeResponse(AppResponse.history, history);
   }
 
+  // Get account operations and generate csv file.
+  String _historyCSV(List<String> parts) {
+    if (parts.length != 2) {
+      return _encodeResponse(AppResponse.errOperation, null);
+    }
+
+    final accountNumber = int.tryParse(parts[1]);
+    if (accountNumber == null) {
+      return _encodeResponse(AppResponse.errOperation, null);
+    }
+
+    final result = _database.select(
+      'SELECT DateOperation, LibelleOperation, Montant FROM operations WHERE NumeroCompte = ? ORDER BY DateOperation DESC LIMIT 10',
+      [accountNumber],
+    );
+
+    if (result.isEmpty) return _encodeResponse(AppResponse.history, []);
+
+    final timestamp = DateTime.now().toIso8601String().replaceAll(':', '_');
+    final fileName = 'history_csv_${accountNumber}_$timestamp.csv';
+    final filePath = '${getIt<AppConfig>().fileServerPath}/$fileName';
+    final file = File(filePath);
+
+    final List<List<dynamic>> csvData = [
+      ['Date', 'Libelle', 'Montant'],
+      ...result.map(
+        (row) => [
+          row['DateOperation'],
+          row['LibelleOperation'],
+          row['Montant'],
+        ],
+      ),
+    ];
+
+    final csvConverter = ListToCsvConverter();
+    final csvString = csvConverter.convert(csvData);
+
+    file.writeAsStringSync(csvString);
+
+    return _encodeResponse(AppResponse.history, filePath);
+  }
+
+  String _downloadFile(List<String> parts) {
+    if (parts.length != 2) {
+      return _encodeResponse(AppResponse.errOperation, null);
+    }
+    final filePath = parts[1];
+    final file = File(filePath);
+    if (!file.existsSync()) {
+      return _encodeResponse(AppResponse.errOperation, 'File not found');
+    }
+    try {
+      final fileBytes = file.readAsBytesSync();
+      final base64Content = base64Encode(fileBytes);
+      return _encodeResponse(AppResponse.downloadOk, {
+        'file_name': file.uri.pathSegments.last,
+        'file_content': base64Content,
+      });
+    } catch (e) {
+      return _encodeResponse(
+        AppResponse.errOperation,
+        'File transfer failed: $e',
+      );
+    }
+  }
+
   // Process the operation based on the request
   String processOperation(String request) {
     final parts = request.split(' ');
@@ -212,8 +282,12 @@ class AppOperation {
         return _transfer(parts);
       case 'HISTORY':
         return _history(parts);
+      case 'HISTORY_CSV':
+        return _historyCSV(parts);
       case 'BALANCE':
         return _balance(parts);
+      case 'DOWNLOAD':
+        return _downloadFile(parts);
       default:
         return _encodeResponse(AppResponse.errOperation, null);
     }

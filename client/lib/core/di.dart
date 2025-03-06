@@ -8,6 +8,7 @@ import 'package:client/core/security.dart';
 import 'package:client/feature/auth/presentation/bloc/bloc/auth_bloc.dart';
 import 'package:client/feature/dashboard/presentation/bloc/dashboard/dashboard_bloc.dart';
 import 'package:client/feature/dashboard/presentation/bloc/deposit/deposit_bloc.dart';
+import 'package:client/feature/dashboard/presentation/bloc/download/download_bloc.dart';
 import 'package:client/feature/dashboard/presentation/bloc/transfer/transfer_bloc.dart';
 import 'package:client/feature/dashboard/presentation/bloc/withdraw/withdraw_bloc.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
@@ -53,4 +54,5 @@ void _initializeDashboard() async {
   getIt.registerFactory(() => WithdrawBloc(getIt()));
   getIt.registerFactory(() => DepositBloc(getIt()));
   getIt.registerFactory(() => TransferBloc(getIt()));
+  getIt.registerFactory(() => DownloadBloc(getIt()));
 }

@@ -16,4 +16,5 @@ class AppConfig {
   String get operationsCSV => _dotEnv['OPERATIONS_CSV'] ?? '';
 
   String get serverLogPath => _dotEnv['SERVER_LOG_PATH'] ?? '';
+  String get fileServerPath => _dotEnv['FILE_SERVER_PATH'] ?? '';
 }
