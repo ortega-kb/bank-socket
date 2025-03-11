@@ -108,7 +108,7 @@ class _AppRootState extends State<AppRoot> {
     );
   }
 
-  // Fonction générique pour afficher un dialog
+  // Fonction générique pour afficher une boîte de dialogue avec formulaire
   void _showAlertDialog({
     required BuildContext context,
     required String title,
@@ -127,7 +127,7 @@ class _AppRootState extends State<AppRoot> {
           backgroundColor: Theme.of(context).colorScheme.surface,
           title: Text(title),
           content: Form(
-            key: formKey, // Utilisation de la clé de formulaire
+            key: formKey,
             child: SingleChildScrollView(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -156,7 +156,46 @@ class _AppRootState extends State<AppRoot> {
     );
   }
 
-  // Pin Dialog
+  // Boîte de dialogue de confirmation pour récapituler l'opération
+  void _showConfirmationDialog({
+    required BuildContext context,
+    required String title,
+    required String content,
+    required VoidCallback onConfirm,
+  }) {
+    getIt<AppLogger>().logInfo("Affichage du dialogue de confirmation: $title");
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          shape: alertBorderShape,
+          backgroundColor: Theme.of(context).colorScheme.surface,
+          title: Text(title),
+          content: Text(content),
+          actions: [
+            TextButton(
+              onPressed: () {
+                getIt<AppLogger>().logInfo(
+                  "Annulation du dialogue de confirmation: $title",
+                );
+                Navigator.pop(context);
+              },
+              child: const Text("Annuler"),
+            ),
+            PrimaryButton(
+              text: "Confirmer",
+              onPressed: () {
+                Navigator.pop(context);
+                onConfirm();
+              },
+            ),
+          ],
+        );
+      },
+    );
+  }
+
+  // Dialogue de saisie du code PIN
   void _showPinDialog(BuildContext context, VoidCallback onConfirm) {
     _showAlertDialog(
       context: context,
@@ -169,8 +208,8 @@ class _AppRootState extends State<AppRoot> {
           getIt<AppLogger>().logInfo(
             "Code PIN validé, confirmation de l'opération",
           );
-          Navigator.pop(context); // Ferme le dialogue PIN
-          onConfirm(); // Exécute l'opération après validation
+          Navigator.pop(context);
+          onConfirm();
         }
       },
       additionalFields: [
@@ -184,37 +223,45 @@ class _AppRootState extends State<AppRoot> {
     );
   }
 
-  // Appel de la fonction générique pour le retrait
+  // Retrait avec confirmation récapitulative
   void _showWithdrawAlertDialog(BuildContext context) {
     _showAlertDialog(
       context: context,
       title: "Retrait",
-      contentText: "Entrez le montant à retirer.",
+      contentText: "Entrez le montant à retirer (USD).",
       buttonText: "Continuer",
       formKey: _withdrawFormKey,
       onPressed: () {
         if (_withdrawFormKey.currentState!.validate()) {
           Navigator.pop(context);
-          _showPinDialog(context, () {
-            _onWithdraw(
-              double.parse(_amountWithdrawController.text),
-              widget.account.accountNumber,
-              int.parse(_pinController.text),
-            );
-          });
+          _showConfirmationDialog(
+            context: context,
+            title: "Confirmation de Retrait",
+            content:
+                "Voulez-vous vraiment retirer ${_amountWithdrawController.text} USD ?",
+            onConfirm: () {
+              _showPinDialog(context, () {
+                _onWithdraw(
+                  double.parse(_amountWithdrawController.text),
+                  widget.account.accountNumber,
+                  int.parse(_pinController.text),
+                );
+              });
+            },
+          );
         }
       },
       additionalFields: [
         TextFormField(
           controller: _amountWithdrawController,
-          decoration: InputDecoration(labelText: "Montant"),
+          decoration: InputDecoration(labelText: "Montant (USD)"),
           validator: (value) => Validator.empty(value, context),
         ),
       ],
     );
   }
 
-  // Appel de la fonction générique pour le dépôt
+  // Dépôt avec confirmation récapitulative
   void _showDepositAlertDialog(BuildContext context) {
     _showAlertDialog(
       context: context,
@@ -225,26 +272,34 @@ class _AppRootState extends State<AppRoot> {
       onPressed: () {
         if (_depositFormKey.currentState!.validate()) {
           Navigator.pop(context);
-          _showPinDialog(context, () {
-            _onDeposit(
-              double.parse(_amountDepositController.text),
-              widget.account.accountNumber,
-              int.parse(_pinController.text),
-            );
-          });
+          _showConfirmationDialog(
+            context: context,
+            title: "Confirmation de Dépôt",
+            content:
+                "Voulez-vous vraiment déposer ${_amountDepositController.text} USD ?",
+            onConfirm: () {
+              _showPinDialog(context, () {
+                _onDeposit(
+                  double.parse(_amountDepositController.text),
+                  widget.account.accountNumber,
+                  int.parse(_pinController.text),
+                );
+              });
+            },
+          );
         }
       },
       additionalFields: [
         TextFormField(
           controller: _amountDepositController,
-          decoration: InputDecoration(labelText: "Montant"),
+          decoration: InputDecoration(labelText: "Montant (USD)"),
           validator: (value) => Validator.empty(value, context),
         ),
       ],
     );
   }
 
-  // Appel de la fonction générique pour le transfert
+  // Transfert avec confirmation récapitulative
   void _showTransferAlertDialog(BuildContext context) {
     _showAlertDialog(
       context: context,
@@ -255,14 +310,22 @@ class _AppRootState extends State<AppRoot> {
       onPressed: () {
         if (_transferFormKey.currentState!.validate()) {
           Navigator.pop(context);
-          _showPinDialog(context, () {
-            _onTransfer(
-              double.parse(_amountTransferController.text),
-              widget.account.accountNumber,
-              int.parse(_accountDstController.text),
-              int.parse(_pinController.text),
-            );
-          });
+          _showConfirmationDialog(
+            context: context,
+            title: "Confirmation de Transfert",
+            content:
+                "Voulez-vous vraiment transférer ${_amountTransferController.text} USD vers le compte ${_accountDstController.text} ?",
+            onConfirm: () {
+              _showPinDialog(context, () {
+                _onTransfer(
+                  double.parse(_amountTransferController.text),
+                  widget.account.accountNumber,
+                  int.parse(_accountDstController.text),
+                  int.parse(_pinController.text),
+                );
+              });
+            },
+          );
         }
       },
       additionalFields: [
@@ -275,7 +338,7 @@ class _AppRootState extends State<AppRoot> {
         const SizedBox(height: AppDimen.p16),
         TextFormField(
           controller: _amountTransferController,
-          decoration: InputDecoration(labelText: "Montant"),
+          decoration: InputDecoration(labelText: "Montant (USD)"),
           validator: (value) => Validator.empty(value, context),
         ),
       ],
@@ -388,7 +451,7 @@ class _AppRootState extends State<AppRoot> {
         appBar: AppBar(
           leading: Icon(FluentIcons.person_12_filled),
           title: Text(
-            'Salut, ${widget.account.surname}',
+            'Salut, ${widget.account.surname} - N° compte: ${widget.account.accountNumber}',
             style: Theme.of(context).textTheme.bodyLarge,
           ),
           actions: [

@@ -11,7 +11,7 @@ class AppConfig {
   String get serverHost => _dotEnv['SERVER_HOST'] ?? '';
   String get serverPort => _dotEnv['SERVER_PORT'] ?? '';
 
-String get clientsCSV => _dotEnv['CLIENTS_CSV'] ?? '';
+  String get clientsCSV => _dotEnv['CLIENTS_CSV'] ?? '';
   String get comptesCSV => _dotEnv['COMPTES_CSV'] ?? '';
   String get operationsCSV => _dotEnv['OPERATIONS_CSV'] ?? '';
 

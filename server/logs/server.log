@@ -847,3 +847,123 @@
 [2025-03-06 18:54:38.586586] - [INFO] - HISTORY: Historique récupéré pour le compte 199.
 [2025-03-06 18:56:26.593375] - [INFO] - Connection closed for 127.0.0.1:5001
 [2025-03-06 18:56:28.848077] - [INFO] - Connection closed for 127.0.0.1:5001
+[2025-03-06 19:03:31.004849] - [INFO] - Creating the database instance.
+[2025-03-06 19:03:31.020119] - [INFO] - Creating tables in the database.
+[2025-03-06 19:03:31.027270] - [INFO] - Skipping import for "clients", data already exists.
+[2025-03-06 19:03:31.027500] - [INFO] - Skipping import for "comptes", data already exists.
+[2025-03-06 19:03:31.027777] - [INFO] - Skipping import for "operations", data already exists.
+[2025-03-06 19:03:31.035628] - [INFO] - Secure bank server started on 127.0.0.1:5001...
+[2025-03-06 19:04:12.510779] - [INFO] - New connection from 127.0.0.1:5001
+[2025-03-06 19:04:16.289607] - [INFO] - Connection closed for 127.0.0.1:5001
+[2025-03-08 19:03:32.803544] - [INFO] - Creating the database instance.
+[2025-03-08 19:03:32.830488] - [INFO] - Creating tables in the database.
+[2025-03-08 19:03:32.843010] - [INFO] - Skipping import for "clients", data already exists.
+[2025-03-08 19:03:32.844361] - [INFO] - Skipping import for "comptes", data already exists.
+[2025-03-08 19:03:32.847292] - [INFO] - Skipping import for "operations", data already exists.
+[2025-03-08 19:03:32.858691] - [INFO] - Secure bank server started on 127.0.0.1:5001...
+[2025-03-08 19:05:08.729394] - [INFO] - New connection from 127.0.0.1:5001
+[2025-03-08 19:05:50.748039] - [INFO] - TESTPIN réussi pour le compte 198
+[2025-03-08 19:05:50.818770] - [INFO] - Récupération du solde pour le compte 198
+[2025-03-08 19:05:50.819791] - [INFO] - Balance du compte 198: 20500.0
+[2025-03-08 19:05:50.831983] - [INFO] - HISTORY: Historique récupéré pour le compte 198.
+[2025-03-08 19:07:13.054567] - [INFO] - TESTPIN réussi pour le compte 198
+[2025-03-08 19:07:13.104997] - [INFO] - Récupération du solde pour le compte 198
+[2025-03-08 19:07:13.105521] - [INFO] - Balance du compte 198: 20500.0
+[2025-03-08 19:07:13.116444] - [INFO] - HISTORY: Historique récupéré pour le compte 198.
+[2025-03-08 19:07:54.076992] - [INFO] - Connection closed for 127.0.0.1:5001
+[2025-03-08 19:09:41.461961] - [INFO] - New connection from 127.0.0.1:5001
+[2025-03-08 19:10:31.110836] - [INFO] - TESTPIN réussi pour le compte 198
+[2025-03-08 19:10:31.162521] - [INFO] - Récupération du solde pour le compte 198
+[2025-03-08 19:10:31.163022] - [INFO] - Balance du compte 198: 20500.0
+[2025-03-08 19:10:31.166428] - [INFO] - HISTORY: Historique récupéré pour le compte 198.
+[2025-03-08 19:13:54.948288] - [INFO] - TESTPIN réussi pour le compte 198
+[2025-03-08 19:13:54.986319] - [INFO] - Récupération du solde pour le compte 198
+[2025-03-08 19:13:54.988560] - [INFO] - Balance du compte 198: 20500.0
+[2025-03-08 19:13:54.997868] - [INFO] - HISTORY: Historique récupéré pour le compte 198.
+[2025-03-08 23:04:30.942597] - [INFO] - HISTORY_CSV: Fichier CSV généré pour le compte 198: ./files/history_csv_198_2025-03-08T23_04_30.929694.csv
+[2025-03-08 23:04:30.950117] - [INFO] - DOWNLOAD: Fichier ./files/history_csv_198_2025-03-08T23_04_30.929694.csv envoyé avec succès.
+[2025-03-08 23:07:28.780371] - [INFO] - TESTPIN réussi pour le compte 198
+[2025-03-08 23:07:28.799448] - [INFO] - Récupération du solde pour le compte 198
+[2025-03-08 23:07:28.799841] - [INFO] - Balance du compte 198: 20500.0
+[2025-03-08 23:07:28.808274] - [INFO] - HISTORY: Historique récupéré pour le compte 198.
+[2025-03-08 23:15:16.985158] - [INFO] - Connection closed for 127.0.0.1:5001
+[2025-03-08 23:28:47.871160] - [INFO] - New connection from 127.0.0.1:5001
+[2025-03-08 23:30:09.940198] - [INFO] - TESTPIN réussi pour le compte 198
+[2025-03-08 23:30:10.129898] - [INFO] - Récupération du solde pour le compte 198
+[2025-03-08 23:30:10.130347] - [INFO] - Balance du compte 198: 20500.0
+[2025-03-08 23:30:10.133479] - [INFO] - HISTORY: Historique récupéré pour le compte 198.
+[2025-03-08 23:32:48.917135] - [INFO] - Connection closed for 127.0.0.1:5001
+[2025-03-11 10:03:11.237828] - [INFO] - Creating the database instance.
+[2025-03-11 10:03:11.259551] - [INFO] - Creating tables in the database.
+[2025-03-11 10:03:11.270993] - [INFO] - Skipping import for "clients", data already exists.
+[2025-03-11 10:03:11.271987] - [INFO] - Skipping import for "comptes", data already exists.
+[2025-03-11 10:03:11.274973] - [INFO] - Skipping import for "operations", data already exists.
+[2025-03-11 10:03:11.288792] - [INFO] - Secure bank server started on 127.0.0.1:5001...
+[2025-03-11 10:06:16.049783] - [INFO] - New connection from 127.0.0.1:5001
+[2025-03-11 10:18:45.779258] - [INFO] - New connection from 127.0.0.1:5001
+[2025-03-11 10:19:27.601246] - [INFO] - TESTPIN réussi pour le compte 1
+[2025-03-11 10:19:27.803458] - [INFO] - Récupération du solde pour le compte 1
+[2025-03-11 10:19:27.804138] - [INFO] - Balance du compte 1: 10753.78
+[2025-03-11 10:19:27.809887] - [INFO] - HISTORY: Historique récupéré pour le compte 1.
+[2025-03-11 10:19:34.243639] - [INFO] - Connection closed for 127.0.0.1:5001
+[2025-03-11 10:19:35.331222] - [INFO] - Connection closed for 127.0.0.1:5001
+[2025-03-11 10:20:35.114842] - [INFO] - New connection from 127.0.0.1:5001
+[2025-03-11 10:20:52.115771] - [INFO] - New connection from 127.0.0.1:5001
+[2025-03-11 10:21:36.396239] - [INFO] - TESTPIN réussi pour le compte 1
+[2025-03-11 10:21:36.441350] - [INFO] - Récupération du solde pour le compte 1
+[2025-03-11 10:21:36.441781] - [INFO] - Balance du compte 1: 10753.78
+[2025-03-11 10:21:36.444169] - [INFO] - HISTORY: Historique récupéré pour le compte 1.
+[2025-03-11 10:22:37.757305] - [INFO] - Récupération du solde pour le compte 1
+[2025-03-11 10:22:37.758488] - [INFO] - Balance du compte 1: 10753.78
+[2025-03-11 10:22:37.767005] - [INFO] - HISTORY: Historique récupéré pour le compte 1.
+[2025-03-11 10:22:48.149708] - [INFO] - Connection closed for 127.0.0.1:5001
+[2025-03-11 10:22:49.308093] - [INFO] - Connection closed for 127.0.0.1:5001
+[2025-03-11 10:53:25.620739] - [INFO] - New connection from 127.0.0.1:5001
+[2025-03-11 10:53:30.365918] - [INFO] - TESTPIN réussi pour le compte 1
+[2025-03-11 10:53:30.420444] - [INFO] - Récupération du solde pour le compte 1
+[2025-03-11 10:53:30.420866] - [INFO] - Balance du compte 1: 10753.78
+[2025-03-11 10:53:30.423751] - [INFO] - HISTORY: Historique récupéré pour le compte 1.
+[2025-03-11 10:53:40.624410] - [INFO] - Connection closed for 127.0.0.1:5001
+[2025-03-11 10:54:01.602304] - [INFO] - New connection from 127.0.0.1:5001
+[2025-03-11 10:54:06.599071] - [INFO] - TESTPIN réussi pour le compte 1
+[2025-03-11 10:54:06.667565] - [INFO] - Récupération du solde pour le compte 1
+[2025-03-11 10:54:06.668156] - [INFO] - Balance du compte 1: 10753.78
+[2025-03-11 10:54:06.693251] - [INFO] - HISTORY: Historique récupéré pour le compte 1.
+[2025-03-11 10:54:31.865467] - [INFO] - Connection closed for 127.0.0.1:5001
+[2025-03-11 10:56:28.494232] - [INFO] - New connection from 127.0.0.1:5001
+[2025-03-11 10:56:44.458794] - [INFO] - TESTPIN réussi pour le compte 1
+[2025-03-11 10:56:44.656671] - [INFO] - Récupération du solde pour le compte 1
+[2025-03-11 10:56:44.657069] - [INFO] - Balance du compte 1: 10753.78
+[2025-03-11 10:56:44.661055] - [INFO] - HISTORY: Historique récupéré pour le compte 1.
+[2025-03-11 10:57:07.948351] - [INFO] - Connection closed for 127.0.0.1:5001
+[2025-03-11 11:01:33.372284] - [INFO] - New connection from 127.0.0.1:5001
+[2025-03-11 11:02:11.704958] - [INFO] - Connection closed for 127.0.0.1:5001
+[2025-03-11 11:03:07.015021] - [INFO] - New connection from 127.0.0.1:5001
+[2025-03-11 11:03:12.347540] - [INFO] - TESTPIN réussi pour le compte 1
+[2025-03-11 11:03:12.548593] - [INFO] - Récupération du solde pour le compte 1
+[2025-03-11 11:03:12.549011] - [INFO] - Balance du compte 1: 10753.78
+[2025-03-11 11:03:12.552488] - [INFO] - HISTORY: Historique récupéré pour le compte 1.
+[2025-03-11 11:04:25.524252] - [INFO] - TESTPIN réussi pour le compte 1
+[2025-03-11 11:04:25.530512] - [INFO] - Récupération du solde pour le compte 1
+[2025-03-11 11:04:25.594809] - [INFO] - Opération enregistrée: Transfer to 198 de 50.0 sur le compte 1
+[2025-03-11 11:04:25.601819] - [INFO] - Opération enregistrée: Transfer received from 1 de 50.0 sur le compte 198
+[2025-03-11 11:04:25.603832] - [INFO] - Transfert de 50.0 de 1 vers 198 effectué.
+[2025-03-11 11:04:25.672608] - [INFO] - Récupération du solde pour le compte 1
+[2025-03-11 11:04:25.673130] - [INFO] - Balance du compte 1: 10703.78
+[2025-03-11 11:04:25.694705] - [INFO] - HISTORY: Historique récupéré pour le compte 1.
+[2025-03-11 11:04:55.143917] - [INFO] - Connection closed for 127.0.0.1:5001
+[2025-03-11 11:07:09.433800] - [INFO] - New connection from 127.0.0.1:5001
+[2025-03-11 11:07:14.590867] - [INFO] - TESTPIN réussi pour le compte 1
+[2025-03-11 11:07:14.802874] - [INFO] - Récupération du solde pour le compte 1
+[2025-03-11 11:07:14.803329] - [INFO] - Balance du compte 1: 10703.78
+[2025-03-11 11:07:14.807617] - [INFO] - HISTORY: Historique récupéré pour le compte 1.
+[2025-03-11 11:07:48.659108] - [INFO] - Connection closed for 127.0.0.1:5001
+[2025-03-11 11:07:49.022864] - [INFO] - New connection from 127.0.0.1:5001
+[2025-03-11 11:07:55.911711] - [INFO] - TESTPIN réussi pour le compte 1
+[2025-03-11 11:07:56.110326] - [INFO] - Récupération du solde pour le compte 1
+[2025-03-11 11:07:56.110811] - [INFO] - Balance du compte 1: 10703.78
+[2025-03-11 11:07:56.114933] - [INFO] - HISTORY: Historique récupéré pour le compte 1.
+[2025-03-11 11:08:18.355793] - [INFO] - Connection closed for 127.0.0.1:5001
+[2025-03-11 11:20:25.582759] - [INFO] - New connection from 127.0.0.1:5001
+[2025-03-11 11:21:09.497933] - [INFO] - REGISTER: Compte créé pour le client 68 avec le compte 200.
+[2025-03-11 11:22:10.775248] - [INFO] - Connection closed for 127.0.0.1:5001
