@@ -967,3 +967,9 @@
 [2025-03-11 11:20:25.582759] - [INFO] - New connection from 127.0.0.1:5001
 [2025-03-11 11:21:09.497933] - [INFO] - REGISTER: Compte créé pour le client 68 avec le compte 200.
 [2025-03-11 11:22:10.775248] - [INFO] - Connection closed for 127.0.0.1:5001
+[2025-03-11 11:49:29.378507] - [INFO] - New connection from 127.0.0.1:5001
+[2025-03-11 11:49:43.901776] - [INFO] - TESTPIN réussi pour le compte 1
+[2025-03-11 11:49:43.957033] - [INFO] - Récupération du solde pour le compte 1
+[2025-03-11 11:49:43.957509] - [INFO] - Balance du compte 1: 10703.78
+[2025-03-11 11:49:43.960676] - [INFO] - HISTORY: Historique récupéré pour le compte 1.
+[2025-03-11 11:50:22.339543] - [INFO] - Connection closed for 127.0.0.1:5001
